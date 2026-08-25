@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خلاصة السادس | المنصة الأولى لطلبة السادس الإعدادي</title>
+<meta name="description" content="خلاصة السادس — أقوى منصة طلابية على مستوى الإقليم: عداد وزاري، أرشيف أسئلة، عداد بومودورو، مراجعة كيمياء وفيزياء، وحاسبة معدل.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1B3B;
+    --navy:#122A63;
+    --royal:#1E3E8C;
+    --blue:#2F5FD1;
+    --blue-soft:#EAF0FE;
+    --blue-mist:#F5F8FF;
+    --gold:#B98B2E;
+    --gold-soft:#F4E7C9;
+    --paper:#FBFCFF;
+    --white:#FFFFFF;
+    --slate:#5B6B8C;
+    --line:#E1E8F8;
+    --sky:#38BDF8;
+    --sky-soft:#E0F2FE;
+    --shadow: 0 20px 45px -20px rgba(11,27,59,.25);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body, html{ margin:0; padding:0; width:100%; }
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Tajawal', Tahoma, sans-serif;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3, .brand-name, .eyebrow, .stat-num{ font-family:'Cairo', 'Tajawal', sans-serif; }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  section{ position:relative; }
+
+  /* ===== decorative background wash ===== */
+  body::before{
+    content:"";
+    position:fixed; inset:0; z-index:-2;
+    background:
+      radial-gradient(900px 500px at 85% -5%, var(--blue-soft), transparent 60%),
+      radial-gradient(700px 420px at 5% 8%, var(--gold-soft), transparent 55%);
+    pointer-events:none;
+  }
+
+  /* ===== زخارف مغربية متحركة (خلفية سماوية) ===== */
+  .moroccan-bg{
+    position:fixed; inset:-120px; z-index:-1; pointer-events:none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%2338BDF8' stroke-width='1.1'%3E%3Cpath d='M60 8 L92 30 L92 90 L60 112 L28 90 L28 30 Z' opacity='.45'/%3E%3Crect x='30' y='30' width='60' height='60' opacity='.4'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)' opacity='.4'/%3E%3Ccircle cx='60' cy='60' r='21' opacity='.5'/%3E%3Ccircle cx='60' cy='60' r='4' opacity='.6'/%3E%3Cpath d='M0 60 H120 M60 0 V120' opacity='.18'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:120px 120px;
+    background-repeat:repeat;
+    opacity:.55;
+    -webkit-mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,.85) 8%, rgba(0,0,0,.85) 92%, transparent);
+    mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,.85) 8%, rgba(0,0,0,.85) 92%, transparent);
+    animation:moroccanDrift 55s linear infinite;
+  }
+  @keyframes moroccanDrift{
+    from{ background-position:0 0; }
+    to{ background-position:120px 120px; }
+  }
+
+  /* ===== laurel divider (signature motif, echoes the crest logo) ===== */
+  .laurel{ display:flex; align-items:center; justify-content:center; gap:10px; }
+  .laurel svg{ width:64px; height:22px; flex:none; }
+  .laurel .stem{ width:64px; height:1px; background:linear-gradient(90deg, transparent, var(--line), transparent); flex:1 1 auto; }
+
+  /* ===== nav ===== */
+  header.site-nav{
+    position:sticky; top:0; z-index:100;
+    background:rgba(251,252,255,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1180px; margin:0 auto; padding:14px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:18px;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .brand img{ width:44px; height:44px; object-fit:contain; }
+  .brand-name{ font-weight:800; font-size:1.05rem; color:var(--ink); line-height:1.1; }
+  .brand-name small{ display:block; font-family:'Tajawal'; font-weight:500; font-size:.68rem; color:var(--slate); margin-top:2px; letter-spacing:.3px; }
+
+  nav.links{ display:flex; align-items:center; gap:30px; }
+  nav.links a{
+    text-decoration:none; color:var(--navy); font-weight:700; font-size:.92rem;
+    position:relative; padding:4px 0;
+  }
+  nav.links a::after{
+    content:""; position:absolute; right:0; bottom:-2px; height:2px; width:0;
+    background:var(--gold); transition:width .25s ease;
+  }
+  nav.links a:hover::after{ width:100%; }
+
+  .nav-cta{
+    background:var(--navy); color:#fff; padding:10px 22px; border-radius:999px;
+    font-weight:700; font-size:.88rem; text-decoration:none; white-space:nowrap;
+    box-shadow:0 10px 20px -8px rgba(18,42,99,.55);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .nav-cta:hover{ transform:translateY(-2px); box-shadow:0 14px 26px -8px rgba(18,42,99,.6); }
+
+  .burger{ display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer; padding:6px; }
+  .burger span{ width:24px; height:2px; background:var(--ink); border-radius:2px; }
+
+  /* ===== hero ===== */
+  .hero{ max-width:1180px; margin:0 auto; padding:64px 24px 40px; text-align:center; }
+  .medallion-wrap{ position:relative; display:inline-flex; align-items:center; justify-content:center; gap:22px; }
+  .medallion{
+    width:172px; height:172px; border-radius:50%;
+    background:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: var(--shadow), inset 0 0 0 1px var(--line);
+    position:relative;
+    animation: float 6s ease-in-out infinite;
+  }
+  .medallion::before{
+    content:""; position:absolute; inset:-14px; border-radius:50%;
+    border:1px dashed var(--blue-soft);
+  }
+  .medallion::after{
+    content:""; position:absolute; inset:-30px; border-radius:50%;
+    background:radial-gradient(circle, rgba(47,95,209,.14), transparent 70%);
+    z-index:-1;
+    animation:pulse 3.6s ease-in-out infinite;
+  }
+  .medallion img{ width:120px; height:120px; object-fit:contain; }
+  @keyframes float{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-8px); } }
+  @keyframes pulse{ 0%,100%{ opacity:.6; transform:scale(1); } 50%{ opacity:1; transform:scale(1.06); } }
+
+  .wing{ opacity:.85; }
+  .wing svg{ width:78px; height:56px; }
+  @media (max-width:640px){ .wing{ display:none; } }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--gold); font-weight:700; font-size:.8rem; letter-spacing:1px;
+    background:var(--gold-soft); padding:6px 16px; border-radius:999px;
+    margin:26px 0 14px;
+  }
+
+  h1.hero-title{
+    font-size:clamp(2.1rem, 5vw, 3.4rem);
+    font-weight:900; color:var(--ink); margin:0 0 16px; line-height:1.15;
+  }
+  h1.hero-title span{ color:var(--blue); }
+
+  .hero-sub{
+    max-width:620px; margin:0 auto 32px; color:var(--slate);
+    font-size:1.05rem; line-height:1.9; font-weight:500;
+  }
+
+  .hero-actions{ display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 30px; border-radius:999px; text-decoration:none;
+    font-weight:700; font-size:.95rem; transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-primary{ background:var(--navy); color:#fff; box-shadow:0 14px 28px -10px rgba(18,42,99,.55); }
+  .btn-primary:hover{ transform:translateY(-3px); }
+  .btn-ghost{ background:#fff; color:var(--navy); box-shadow:0 0 0 1.5px var(--line) inset; }
+  .btn-ghost:hover{ box-shadow:0 0 0 1.5px var(--blue) inset; transform:translateY(-3px); }
+
+  /* ===== stats strip ===== */
+  .stats{
+    max-width:1000px; margin:56px auto 0; background:var(--white);
+    border-radius:22px; box-shadow:var(--shadow);
+    display:grid; grid-template-columns:repeat(4,1fr);
+    padding:26px 10px;
+  }
+  .stat{ text-align:center; padding:6px 14px; position:relative; }
+  .stat + .stat::before{
+    content:""; position:absolute; top:8px; bottom:8px; right:100%;
+    width:1px; background:var(--line);
+  }
+  .stat-num{ font-weight:900; font-size:1.5rem; color:var(--navy); }
+  .stat-label{ font-size:.78rem; color:var(--slate); font-weight:500; margin-top:4px; }
+
+  @media (max-width:760px){
+    .stats{ grid-template-columns:repeat(2,1fr); gap:22px 0; }
+    .stat + .stat::before{ display:none; }
+  }
+
+  /* ===== section shell ===== */
+  .section{ max-width:1180px; margin:0 auto; padding:96px 24px 0; }
+  .section-head{ text-align:center; max-width:640px; margin:0 auto 48px; }
+  .section-head h2{ font-size:clamp(1.7rem,3vw,2.3rem); font-weight:900; color:var(--ink); margin:14px 0 12px; }
+  .section-head p{ color:var(--slate); font-size:1rem; line-height:1.8; font-weight:500; margin:0; }
+
+  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in-view{ opacity:1; transform:translateY(0); }
+
+  /* ===== tools grid ===== */
+  .tools-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
+  @media (max-width:960px){ .tools-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:640px){ .tools-grid{ grid-template-columns:1fr; } }
+
+  .tool-card{
+    background:var(--white); border-radius:20px; overflow:hidden; text-decoration:none; color:var(--ink);
+    box-shadow:0 10px 30px -18px rgba(11,27,59,.25);
+    display:flex; flex-direction:column;
+    transition:transform .25s ease, box-shadow .25s ease;
+    border:1px solid var(--line);
+  }
+  .tool-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
+
+  /* --- image slot: replace the placeholder <img src> below with a real screenshot
+         of the site. If the file is missing, an icon badge is shown automatically. --- */
+  .tool-media{
+    position:relative; height:150px;
+    background:linear-gradient(135deg, var(--blue-soft), var(--white));
+    display:flex; align-items:center; justify-content:center;
+  }
+  .tool-media img.shot{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .tool-icon{
+    width:60px; height:60px; border-radius:16px; background:var(--white);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 20px -8px rgba(18,42,99,.25);
+    color:var(--royal);
+  }
+  .tool-icon svg{ width:30px; height:30px; }
+  .tool-tag{
+    position:absolute; top:12px; left:12px; background:var(--navy); color:#fff;
+    font-size:.68rem; font-weight:700; padding:4px 12px; border-radius:999px; letter-spacing:.3px;
+  }
+
+  .tool-body{ padding:20px 22px 24px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .tool-body h3{ margin:0; font-size:1.08rem; font-weight:800; color:var(--ink); }
+  .tool-body p{ margin:0; color:var(--slate); font-size:.88rem; line-height:1.7; font-weight:500; flex:1; }
+  .tool-link{ display:flex; align-items:center; gap:6px; margin-top:10px; color:var(--royal); font-weight:700; font-size:.85rem; }
+  .tool-link svg{ width:16px; height:16px; transition:transform .2s ease; }
+  .tool-card:hover .tool-link svg{ transform:translateX(-4px); }
+
+  /* ===== features ===== */
+  .features{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+  @media (max-width:960px){ .features{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .features{ grid-template-columns:1fr; } }
+  .feature{ background:var(--white); border:1px solid var(--line); border-radius:18px; padding:26px 22px; text-align:right; }
+  .feature .fi{
+    width:46px; height:46px; border-radius:12px; background:var(--blue-soft); color:var(--royal);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+  }
+  .feature .fi svg{ width:24px; height:24px; }
+  .feature h3{ font-size:1rem; font-weight:800; margin:0 0 8px; }
+  .feature p{ font-size:.86rem; color:var(--slate); line-height:1.75; margin:0; font-weight:500; }
+
+  /* ===== about ===== */
+  .about{
+    display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;
+  }
+  @media (max-width:860px){ .about{ grid-template-columns:1fr; } }
+  .about-text h2{ font-size:clamp(1.6rem,3vw,2.1rem); font-weight:900; margin:14px 0 16px; }
+  .about-text p{ color:var(--slate); line-height:1.95; font-size:1rem; font-weight:500; }
+  .about-badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
+  .badge-pill{
+    background:var(--blue-soft); color:var(--royal); font-weight:700; font-size:.78rem;
+    padding:8px 16px; border-radius:999px;
+  }
+
+  .about-crest{
+    position:relative; aspect-ratio:1/1; max-width:360px; margin:0 auto;
+    border-radius:50%; background:var(--white); box-shadow:var(--shadow);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .about-crest::before{
+    content:""; position:absolute; inset:18px; border-radius:50%; border:1.5px dashed var(--line);
+  }
+  .about-crest img{ width:64%; height:64%; object-fit:contain; }
+
+  /* ===== contact / footer ===== */
+  .cta-band{
+    margin:110px 24px 0; max-width:1180px; margin-inline:auto;
+    background:linear-gradient(120deg, var(--navy), var(--royal));
+    border-radius:26px; padding:56px 40px; text-align:center; color:#fff;
+    position:relative; overflow:hidden;
+  }
+  .cta-band::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(500px 260px at 85% 0%, rgba(255,255,255,.12), transparent 60%);
+  }
+  .cta-band h2{ font-size:clamp(1.5rem,3vw,2rem); font-weight:900; margin:0 0 10px; }
+  .cta-band p{ opacity:.9; font-weight:500; margin:0 0 26px; }
+  .cta-band .btn-primary{ background:#fff; color:var(--navy); }
+
+  footer{ max-width:1180px; margin:56px auto 0; padding:40px 24px 46px; }
+  .footer-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:30px; flex-wrap:wrap; padding-bottom:30px; border-bottom:1px solid var(--line); }
+  .footer-brand{ display:flex; align-items:center; gap:12px; }
+  .footer-brand img{ width:40px; height:40px; }
+  .footer-brand .brand-name small{ color:var(--slate); }
+  .footer-links{ display:flex; gap:44px; flex-wrap:wrap; }
+  .footer-col h4{ font-size:.85rem; font-weight:800; margin:0 0 12px; color:var(--ink); }
+  .footer-col a{ display:block; text-decoration:none; color:var(--slate); font-size:.86rem; font-weight:500; margin-bottom:9px; }
+  .footer-col a:hover{ color:var(--royal); }
+  .socials{ display:flex; gap:10px; }
+  .socials a{
+    width:38px; height:38px; border-radius:50%; background:var(--blue-soft); color:var(--royal);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .socials svg{ width:18px; height:18px; }
+
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; padding-top:22px; }
+  .footer-bottom .tagline{
+    font-family:'Cairo'; font-weight:800; font-size:.72rem; letter-spacing:2px; color:var(--gold);
+  }
+  .footer-bottom .copyright{ color:var(--slate); font-size:.8rem; font-weight:500; }
+
+  @media (max-width:760px){
+    nav.links, .nav-cta{ display:none; }
+    .burger{ display:flex; }
+    header.site-nav.open nav.links{
+      display:flex; position:absolute; top:100%; right:0; left:0; background:#fff;
+      flex-direction:column; padding:18px 24px; gap:16px; border-bottom:1px solid var(--line);
+    }
+    header.site-nav.open .nav-cta{ display:inline-flex; margin:0 24px 18px; }
+    .about-crest{ max-width:240px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+    html{ scroll-behavior:auto; }
+    .moroccan-bg{ opacity:.35; }
+  }
+</style>
+</head>
+<body>
+<div class="moroccan-bg" aria-hidden="true"></div>
+
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <img src="logo.png" alt="شعار خلاصة السادس">
+      <span class="brand-name">خلاصة السادس<small>EXCELLENCE • KNOWLEDGE</small></span>
+    </a>
+    <nav class="links">
+      <a href="#top">الرئيسية</a>
+      <a href="#tools">الأدوات</a>
+      <a href="#about">من نحن</a>
+      <a href="#contact">تواصل معنا</a>
+    </nav>
+    <a href="#tools" class="nav-cta">استكشف الأدوات</a>
+    <button class="burger" id="burgerBtn" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="medallion-wrap">
+      <div class="wing" aria-hidden="true">
+        <svg viewBox="0 0 78 56" fill="none"><path d="M76 6C60 2 44 14 34 28c-4 5-8 14-6 22" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/><path d="M70 12c-10 2-20 10-26 20" stroke="#C9A227" stroke-width="1.4" stroke-linecap="round"/><path d="M62 8c-8 3-16 10-21 19" stroke="#C9A227" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div class="medallion"><img src="logo.png" alt="شعار خلاصة السادس"></div>
+      <div class="wing" aria-hidden="true">
+        <svg viewBox="0 0 78 56" fill="none" style="transform:scaleX(-1)"><path d="M76 6C60 2 44 14 34 28c-4 5-8 14-6 22" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/><path d="M70 12c-10 2-20 10-26 20" stroke="#C9A227" stroke-width="1.4" stroke-linecap="round"/><path d="M62 8c-8 3-16 10-21 19" stroke="#C9A227" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+
+    <div class="eyebrow">🏆 أقوى منصة طلابية على مستوى الإقليم</div>
+    <h1 class="hero-title">كل ما يحتاجه طالب <span>السادس الإعدادي</span><br>في مكان واحد</h1>
+    <p class="hero-sub">بإدارة نخبة من طلبة الأوائل وبالتعاون مع أفضل الأساتذة، جمعنا لك عدّادات، أرشيف أسئلة، مواد مراجعة، وأدوات حساب المعدل — لتبقى مركّزًا على التفوق لا على البحث.</p>
+
+    <div class="hero-actions">
+      <a href="#tools" class="btn btn-primary">
+        ابدأ الآن
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#about" class="btn btn-ghost">تعرّف علينا أكثر</a>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><div class="stat-num">٦</div><div class="stat-label">أدوات تعليمية متكاملة</div></div>
+      <div class="stat"><div class="stat-num">٢</div><div class="stat-label">مادتين مراجعة شاملة</div></div>
+      <div class="stat"><div class="stat-num">١٠٠٪</div><div class="stat-label">مجاني بالكامل</div></div>
+      <div class="stat"><div class="stat-num">٢٤/٧</div><div class="stat-label">متاح في أي وقت</div></div>
+    </div>
+  </section>
+
+  <!-- ===== Tools ===== -->
+  <section class="section" id="tools">
+    <div class="section-head reveal">
+      <div class="laurel"><span class="stem"></span><span class="eyebrow" style="margin:0">أدواتنا</span><span class="stem"></span></div>
+      <h2>أدوات صُممت لتسهّل مذاكرتك</h2>
+      <p>كل أداة تعالج مشكلة حقيقية يواجهها طالب السادس — من إدارة الوقت إلى مراجعة المنهج وحساب المعدل.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <!-- كارت 1 : عداد وزاري -->
+      <a href="https://tlv12timer.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+        <div class="tool-media">
+          <span class="tool-tag">مباشر</span>
+          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-timer.jpg -->
+          <img class="shot" src="shot-timer.jpg" alt="عداد وزاري" onerror="this.style.display='none'">
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 9v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 2h6M12 2v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>عداد وزاري</h3>
+          <p>كم تبقّى على إعلان النتائج؟ عداد تنازلي لحظي يرافقك يومًا بيوم حتى الإعلان.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 2 : الأسئلة الوزارية -->
+      <a href="https://questionstlv12.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+        <div class="tool-media">
+          <span class="tool-tag">أرشيف</span>
+          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-questions.jpg -->
+          <img class="shot" src="shot-questions.jpg" alt="الأسئلة الوزارية" onerror="this.style.display='none'">
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6M9 16h6M9 8h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>الأسئلة الوزارية</h3>
+          <p>أرشيف منظّم لأسئلة الأعوام السابقة، سهل التصفح والبحث حسب المادة والفصل.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 3 : عداد بومودورو -->
+      <a href="https://study-with-one.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+        <div class="tool-media">
+          <span class="tool-tag">تركيز</span>
+          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-pomodoro.jpg -->
+          <img class="shot" src="shot-pomodoro.jpg" alt="عداد بومودورو" onerror="this.style.display='none'">
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 9h16M9 3v3M15 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>عداد بومودورو</h3>
+          <p>قسّم وقتك بين فترات تركيز وراحة قصيرة، وحافظ على إنتاجيتك خلال المذاكرة الطويلة.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 4 : كيمياء -->
+      <a href="https://chemistrytlv12.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+        <div class="tool-media">
+          <span class="tool-tag">مادة</span>
+          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-chemistry.jpg -->
+          <img class="shot" src="shot-chemistry.jpg" alt="كيمياء" onerror="this.style.display='none'">
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 16h8" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>مراجعة الكيمياء</h3>
+          <p>شرح مبسّط وشامل لمنهج الكيمياء، مقسّم بأسلوب يسهّل الحفظ والفهم قبل الامتحان.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 5 : حاسبة المعدل -->
+      <a href="https://tlv12calculator.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+        <div class="tool-media">
+          <span class="tool-tag">أداة</span>
+          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-calculator.jpg -->
+          <img class="shot" src="shot-calculator.jpg" alt="حاسبة المعدل" onerror="this.style.display='none'">
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h8M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1M8 19h1M12 19h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>حاسبة المعدل</h3>
+          <p>احسب معدلك بدقة مع احتساب نسبة الصف العاشر والحادي عشر خلال ثوانٍ.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 6 : فيزياء -->
+      <a href="https://snowy-three-10.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+        <div class="tool-media">
+          <span class="tool-tag">مادة</span>
+          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-physics.jpg -->
+          <img class="shot" src="shot-physics.jpg" alt="فيزياء" onerror="this.style.display='none'">
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" stroke="currentColor" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8" transform="rotate(120 12 12)"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>مراجعة الفيزياء</h3>
+          <p>تغطية متكاملة لجميع فصول منهج الفيزياء بأسلوب مركّز يوفّر وقتك.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section class="section" id="why">
+    <div class="section-head reveal">
+      <div class="laurel"><span class="stem"></span><span class="eyebrow" style="margin:0">لماذا نحن</span><span class="stem"></span></div>
+      <h2>لماذا يختار الطلبة خلاصة السادس</h2>
+    </div>
+
+    <div class="features">
+      <div class="feature reveal">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>مبني من طلاب لطلاب</h3>
+        <p>فريق العمل من طلبة الأوائل الذين خاضوا نفس تجربة السادس الإعدادي بأنفسهم.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>تغطية شاملة للمنهج</h3>
+        <p>أدوات ومواد تغطي أهم أجزاء منهج السادس الإعدادي بترتيب واضح ومباشر.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M18 4v4h-4M6 20v-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>تحديث مستمر</h3>
+        <p>نراجع الأدوات باستمرار ونطوّرها بناءً على ملاحظات الطلبة واحتياجاتهم الفعلية.</p>
+      </div>
+      <div class="feature reveal">
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 4 6.5 4c2 0 3.5 1.2 4.3 2.8.8-1.6 2.3-2.8 4.3-2.8 3.5 0 6 3.5 4 8-2.5 4.65-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <h3>مجاني بالكامل</h3>
+        <p>كل الأدوات متاحة لجميع طلبة الإقليم دون أي اشتراك أو مقابل مادي.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="section" id="about">
+    <div class="about">
+      <div class="about-text reveal">
+        <div class="eyebrow">من نحن</div>
+        <h2>قصة خلاصة السادس</h2>
+        <p>انطلقت المنصة من فكرة بسيطة: أن تكون المذاكرة أسهل وأكثر تنظيمًا لطلبة السادس الإعدادي في الإقليم. بإدارة نخبة من الطلبة الأوائل وبالتعاون مع أفضل الأساتذة، جمعنا في مكان واحد كل ما يحتاجه الطالب — من عدّادات وأرشيف أسئلة، إلى مواد مراجعة وأدوات حساب المعدل — ليبقى تركيزه على التفوق لا على البحث.</p>
+        <div class="about-badges">
+          <span class="badge-pill">🎓 تفوّق أكاديمي</span>
+          <span class="badge-pill">📚 معرفة منظّمة</span>
+          <span class="badge-pill">🏆 نجاح مستمر</span>
+        </div>
+      </div>
+      <div class="about-crest reveal">
+        <img src="logo.png" alt="شعار خلاصة السادس">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA / Contact ===== -->
+  <section class="section" id="contact">
+    <div class="cta-band reveal">
+      <h2>جاهز تبدأ رحلة التفوق؟</h2>
+      <p>جرّب أدواتنا الآن مجانًا، أو تواصل معنا لأي استفسار أو اقتراح.</p>
+      <a href="#tools" class="btn btn-primary">استكشف الأدوات</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="logo.png" alt="شعار خلاصة السادس">
+      <span class="brand-name">خلاصة السادس<small>أقوى منصة طلابية على مستوى الإقليم</small></span>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <a href="#top">الرئيسية</a>
+        <a href="#tools">الأدوات</a>
+        <a href="#about">من نحن</a>
+      </div>
+      <div class="footer-col">
+        <h4>الأدوات</h4>
+        <a href="https://tlv12timer.vercel.app/" target="_blank" rel="noopener">عداد وزاري</a>
+        <a href="https://tlv12calculator.vercel.app/" target="_blank" rel="noopener">حاسبة المعدل</a>
+        <a href="https://questionstlv12.vercel.app/" target="_blank" rel="noopener">الأسئلة الوزارية</a>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <!-- استبدل # بروابط التواصل الاجتماعي الحقيقية -->
+        <div class="socials">
+          <a href="#" aria-label="تيليجرام"><svg viewBox="0 0 24 24" fill="none"><path d="M21 4L3 11l6 2 2 6 3-4 5 3 2-14z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+          <a href="#" aria-label="انستغرام"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4.2A8 8 0 1112 20a8 8 0 01-4.6-1.4L4 20z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="tagline">EXCELLENCE • KNOWLEDGE • SUCCESS</span>
+    <span class="copyright">© 2026 خلاصة السادس. جميع الحقوق محفوظة.</span>
+  </div>
+</footer>
+
+<script>
+  // قائمة الجوال
+  const burger = document.getElementById('burgerBtn');
+  const nav = document.getElementById('siteNav');
+  burger.addEventListener('click', () => nav.classList.toggle('open'));
+  document.querySelectorAll('nav.links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  // ظهور العناصر عند التمرير
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
