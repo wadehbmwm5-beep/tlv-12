@@ -243,6 +243,43 @@
   .tool-link svg{ width:16px; height:16px; transition:transform .2s ease; }
   .tool-card:hover .tool-link svg{ transform:translateX(-4px); }
 
+  /* --- featured partner card (معهد الخوارزمي) — spans the full grid row --- */
+  .tool-card.featured{
+    grid-column:1 / -1; flex-direction:row; position:relative;
+    border:1px solid var(--gold-soft);
+  }
+  .tool-card.featured::before{
+    content:""; position:absolute; top:0; right:0; left:0; height:4px; z-index:2;
+    background:linear-gradient(90deg, var(--gold), var(--royal), var(--gold));
+  }
+  .tool-card.featured .tool-media{
+    height:auto; min-height:240px; flex:0 0 34%;
+    background:#fff; border-left:1px solid var(--line);
+  }
+  .tool-card.featured .tool-media img.logo{
+    width:200px; height:200px; object-fit:contain; mix-blend-mode:multiply;
+    transition:transform .35s ease;
+  }
+  .tool-card.featured:hover .tool-media img.logo{ transform:scale(1.05); }
+  .tool-card.featured .tool-tag{ background:linear-gradient(135deg,#C9A227,var(--gold)); }
+  .tool-card.featured .tool-body{ padding:32px 34px; justify-content:center; gap:10px; }
+  .tool-card.featured .tool-body h3{ font-size:1.45rem; font-weight:900; }
+  .tool-card.featured .motto{ color:var(--gold); font-family:'Cairo'; font-weight:800; font-size:.95rem; margin:-4px 0 2px; }
+  .tool-card.featured .tool-body p{ flex:0; }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  .chips span{
+    background:var(--blue-mist); border:1px solid var(--line); color:var(--navy);
+    font-weight:700; font-size:.76rem; padding:6px 12px; border-radius:999px;
+  }
+  .tool-card.featured .tool-link{ color:var(--gold); }
+  @media (max-width:640px){
+    .tool-card.featured{ flex-direction:column; }
+    .tool-card.featured .tool-media{ flex:none; min-height:0; height:190px; border-left:0; border-bottom:1px solid var(--line); }
+    .tool-card.featured .tool-media img.logo{ width:160px; height:160px; }
+    .tool-card.featured .tool-body{ padding:20px 22px 24px; }
+    .tool-card.featured .tool-body h3{ font-size:1.15rem; }
+  }
+
   /* ===== features ===== */
   .features{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
   @media (max-width:960px){ .features{ grid-template-columns:repeat(2,1fr); } }
@@ -346,6 +383,7 @@
     <nav class="links">
       <a href="#top">الرئيسية</a>
       <a href="#tools">الأدوات</a>
+      <a href="#partner">معهد الخوارزمي</a>
       <a href="#about">من نحن</a>
       <a href="#contact">تواصل معنا</a>
     </nav>
@@ -502,6 +540,26 @@
         </div>
       </a>
 
+      <!-- كارت 7 : معهد الخوارزمي (بطاقة مميزة بعرض كامل) -->
+      <a href="https://alkhwarizmiinstitute.vercel.app/" id="partner" class="tool-card featured reveal" rel="noopener" target="_blank">
+        <div class="tool-media">
+          <span class="tool-tag">شريكنا التعليمي</span>
+          <img class="logo" src="alkhwarizmi-logo.png" alt="شعار معهد الخوارزمي" loading="lazy">
+        </div>
+        <div class="tool-body">
+          <h3>معهد الخوارزمي</h3>
+          <div class="motto">أساتذة يبنون مستقبلك بالعلم</div>
+          <p>تعرّف على الكادر التدريسي للمعهد وخبرة كل أستاذ واختصاصه، وتابع الدورات الموسمية، واحجز مقعدك مباشرة.</p>
+          <div class="chips">
+            <span>كادر تدريسي متميز</span>
+            <span>الدورات الشتوية ❄</span>
+            <span>منهج الإقليم والمركز</span>
+            <span>حجز عبر واتساب</span>
+          </div>
+          <span class="tool-link">زيارة موقع المعهد <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
     </div>
   </section>
 
@@ -585,6 +643,10 @@
         <a href="https://tlv12timer.vercel.app/" target="_blank" rel="noopener">عداد وزاري</a>
         <a href="https://tlv12calculator.vercel.app/" target="_blank" rel="noopener">حاسبة المعدل</a>
         <a href="https://questionstlv12.vercel.app/" target="_blank" rel="noopener">الأسئلة الوزارية</a>
+      </div>
+      <div class="footer-col">
+        <h4>شركاؤنا</h4>
+        <a href="https://alkhwarizmiinstitute.vercel.app/" target="_blank" rel="noopener">معهد الخوارزمي</a>
       </div>
       <div class="footer-col">
         <h4>تواصل معنا</h4>
