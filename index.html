@@ -4,14 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>خلاصة السادس | المنصة الأولى لطلبة السادس الإعدادي</title>
-<meta name="description" content="خلاصة السادس — أقوى منصة طلابية على مستوى الإقليم: عداد وزاري، أرشيف أسئلة، عداد بومودورو، مراجعة كيمياء وفيزياء، حاسبة معدل، ومترجم عربي–كوردي–إنكليزي.">
+<meta name="description" content="خلاصة السادس: أدوات مجانية لطلبة السادس الإعدادي في الإقليم. عداد وزاري، أرشيف أسئلة وزارية، عداد بومودورو بأصوات تركيز، مراجعة كيمياء وفيزياء، حاسبة معدل، ومترجم عربي–كوردي–إنكليزي.">
+<link rel="canonical" href="https://tlv-12.vercel.app/">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta name="theme-color" content="#FBFCFF" id="themeColor">
+
+<!-- معاينة الرابط عند مشاركته (واتساب، تيليجرام، إنستغرام) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_IQ">
+<meta property="og:site_name" content="خلاصة السادس">
+<meta property="og:title" content="خلاصة السادس | كل ما يحتاجه طالب السادس في مكان واحد">
+<meta property="og:description" content="عداد وزاري، أسئلة وزارية، بومودورو بأصوات تركيز، مراجعة كيمياء وفيزياء، حاسبة معدل، ومترجم كوردي. كله مجاني.">
+<meta property="og:url" content="https://tlv-12.vercel.app/">
+<meta property="og:image" content="https://tlv-12.vercel.app/logo.png">
+<meta name="twitter:card" content="summary">
+
+<!-- الوضع الليلي: يُطبَّق قبل رسم الصفحة حتى لا تومض -->
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('kh_site_theme'); } catch (e) {}
+    if (t !== 'light' && t !== 'dark') {
+      t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var r = document.documentElement;
+    r.setAttribute('data-theme', t);
+    r.classList.add('js');
+  })();
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-<!-- Vercel Web Analytics -->
-<script type="module" src="/analytics.js"></script>
-<!-- Vercel Speed Insights -->
-<script type="module" src="/speed-insights.js"></script>
+
+<!-- Vercel Web Analytics + Speed Insights (الطريقة الرسمية لمواقع HTML) -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+
 <style>
   :root{
     --ink:#0B1B3B;
@@ -21,14 +53,46 @@
     --blue-soft:#EAF0FE;
     --blue-mist:#F5F8FF;
     --gold:#B98B2E;
+    --gold-ink:#7A5A14;
     --gold-soft:#F4E7C9;
     --paper:#FBFCFF;
-    --white:#FFFFFF;
+    --surface:#FFFFFF;
     --slate:#5B6B8C;
     --line:#E1E8F8;
-    --sky:#38BDF8;
-    --sky-soft:#E0F2FE;
+    --link:#122A63;
+    --icon:#1E3E8C;
+    --btn:#122A63;
+    --btn-ink:#FFFFFF;
+    --nav-bg:rgba(251,252,255,.86);
+    --pattern:.55;
     --shadow: 0 20px 45px -20px rgba(11,27,59,.25);
+    --card-shadow: 0 10px 30px -18px rgba(11,27,59,.25);
+    --radius:20px;
+    color-scheme: light;
+  }
+  :root[data-theme="dark"]{
+    --ink:#EAF0FE;
+    --navy:#122A63;
+    --royal:#1E3E8C;
+    --blue:#86A6FF;
+    --blue-soft:#18264D;
+    --blue-mist:#121D3D;
+    --gold:#D4A84B;
+    --gold-ink:#E6C77F;
+    --gold-soft:#33290F;
+    --paper:#0A1226;
+    --surface:#101A35;
+    --slate:#A9B6D6;
+    --line:#233366;
+    --link:#D3DEFA;
+    --icon:#9DB8FF;
+    --btn:#2F5FD1;
+    --btn-ink:#FFFFFF;
+    --nav-bg:rgba(10,18,38,.86);
+    --pattern:.16;
+    --shadow: 0 20px 45px -20px rgba(0,0,0,.65);
+    --card-shadow: 0 10px 30px -18px rgba(0,0,0,.7);
+    color-scheme: dark;
   }
 
   *{ box-sizing:border-box; }
@@ -40,13 +104,27 @@
     font-family:'Tajawal', Tahoma, sans-serif;
     overflow-x:hidden;
     -webkit-font-smoothing:antialiased;
+    transition:background-color .3s ease, color .3s ease;
   }
   h1,h2,h3, .brand-name, .eyebrow, .stat-num{ font-family:'Cairo', 'Tajawal', sans-serif; }
   img{ max-width:100%; display:block; }
   a{ color:inherit; }
   section{ position:relative; }
+  [id]{ scroll-margin-top:84px; }
+  svg{ flex:none; }
 
-  /* ===== decorative background wash ===== */
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--blue); outline-offset:3px; border-radius:12px;
+  }
+
+  .skip-link{
+    position:absolute; top:-60px; right:16px; z-index:300;
+    background:var(--btn); color:var(--btn-ink); padding:10px 18px; border-radius:12px;
+    font-weight:700; text-decoration:none; transition:top .2s ease;
+  }
+  .skip-link:focus{ top:12px; }
+
+  /* ===== خلفية: إضاءة ناعمة ===== */
   body::before{
     content:"";
     position:fixed; inset:0; z-index:-2;
@@ -56,36 +134,38 @@
     pointer-events:none;
   }
 
-  /* ===== زخارف مغربية متحركة (خلفية سماوية) ===== */
-  .moroccan-bg{
-    position:fixed; inset:-120px; z-index:-1; pointer-events:none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%2338BDF8' stroke-width='1.1'%3E%3Cpath d='M60 8 L92 30 L92 90 L60 112 L28 90 L28 30 Z' opacity='.45'/%3E%3Crect x='30' y='30' width='60' height='60' opacity='.4'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)' opacity='.4'/%3E%3Ccircle cx='60' cy='60' r='21' opacity='.5'/%3E%3Ccircle cx='60' cy='60' r='4' opacity='.6'/%3E%3Cpath d='M0 60 H120 M60 0 V120' opacity='.18'/%3E%3C/g%3E%3C/svg%3E");
-    background-size:120px 120px;
-    background-repeat:repeat;
-    opacity:.55;
+  /* ===== زخارف مغربية متحركة (تتحرك بـ transform حتى تكون خفيفة على الموبايل) ===== */
+  .moroccan-wrap{ position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none;
     -webkit-mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,.85) 8%, rgba(0,0,0,.85) 92%, transparent);
     mask-image:linear-gradient(180deg, transparent, rgba(0,0,0,.85) 8%, rgba(0,0,0,.85) 92%, transparent);
+  }
+  .moroccan-bg{
+    position:absolute; top:-120px; right:-120px; bottom:0; left:0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%2338BDF8' stroke-width='1.1'%3E%3Cpath d='M60 8 L92 30 L92 90 L60 112 L28 90 L28 30 Z' opacity='.45'/%3E%3Crect x='30' y='30' width='60' height='60' opacity='.4'/%3E%3Crect x='30' y='30' width='60' height='60' transform='rotate(45 60 60)' opacity='.4'/%3E%3Ccircle cx='60' cy='60' r='21' opacity='.5'/%3E%3Ccircle cx='60' cy='60' r='4' opacity='.6'/%3E%3Cpath d='M0 60 H120 M60 0 V120' opacity='.18'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:120px 120px;
+    opacity:var(--pattern);
+    will-change:transform;
     animation:moroccanDrift 55s linear infinite;
   }
   @keyframes moroccanDrift{
-    from{ background-position:0 0; }
-    to{ background-position:120px 120px; }
+    from{ transform:translate3d(0,0,0); }
+    to{ transform:translate3d(120px,120px,0); }
   }
 
-  /* ===== laurel divider (signature motif, echoes the crest logo) ===== */
+  /* ===== laurel divider ===== */
   .laurel{ display:flex; align-items:center; justify-content:center; gap:10px; }
-  .laurel svg{ width:64px; height:22px; flex:none; }
   .laurel .stem{ width:64px; height:1px; background:linear-gradient(90deg, transparent, var(--line), transparent); flex:1 1 auto; }
 
   /* ===== nav ===== */
   header.site-nav{
     position:sticky; top:0; z-index:100;
-    background:rgba(251,252,255,.85);
+    background:var(--nav-bg);
+    -webkit-backdrop-filter:blur(10px);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
   }
   .nav-inner{
-    max-width:1180px; margin:0 auto; padding:14px 24px;
+    max-width:1180px; margin:0 auto; padding:12px 24px;
     display:flex; align-items:center; justify-content:space-between; gap:18px;
   }
   .brand{ display:flex; align-items:center; gap:12px; text-decoration:none; }
@@ -93,34 +173,51 @@
   .brand-name{ font-weight:800; font-size:1.05rem; color:var(--ink); line-height:1.1; }
   .brand-name small{ display:block; font-family:'Tajawal'; font-weight:500; font-size:.68rem; color:var(--slate); margin-top:2px; letter-spacing:.3px; }
 
-  nav.links{ display:flex; align-items:center; gap:30px; }
+  nav.links{ display:flex; align-items:center; gap:28px; }
   nav.links a{
-    text-decoration:none; color:var(--navy); font-weight:700; font-size:.92rem;
-    position:relative; padding:4px 0;
+    text-decoration:none; color:var(--link); font-weight:700; font-size:.92rem;
+    position:relative; padding:6px 0;
   }
   nav.links a::after{
-    content:""; position:absolute; right:0; bottom:-2px; height:2px; width:0;
+    content:""; position:absolute; right:0; bottom:0; height:2px; width:0;
     background:var(--gold); transition:width .25s ease;
   }
   nav.links a:hover::after{ width:100%; }
+  nav.links .menu-cta{ display:none; }
 
+  .nav-actions{ display:flex; align-items:center; gap:10px; }
   .nav-cta{
-    background:var(--navy); color:#fff; padding:10px 22px; border-radius:999px;
+    background:var(--btn); color:var(--btn-ink); padding:10px 22px; border-radius:999px;
     font-weight:700; font-size:.88rem; text-decoration:none; white-space:nowrap;
     box-shadow:0 10px 20px -8px rgba(18,42,99,.55);
     transition:transform .2s ease, box-shadow .2s ease;
   }
   .nav-cta:hover{ transform:translateY(-2px); box-shadow:0 14px 26px -8px rgba(18,42,99,.6); }
 
-  .burger{ display:none; flex-direction:column; gap:5px; background:none; border:0; cursor:pointer; padding:6px; }
-  .burger span{ width:24px; height:2px; background:var(--ink); border-radius:2px; }
+  .icon-btn{
+    width:44px; height:44px; border-radius:50%; border:1px solid var(--line);
+    background:var(--surface); color:var(--link); cursor:pointer;
+    display:inline-flex; align-items:center; justify-content:center; padding:0;
+    transition:transform .2s ease, border-color .2s ease;
+  }
+  .icon-btn:hover{ border-color:var(--blue); transform:rotate(-12deg); }
+  .icon-btn svg{ width:20px; height:20px; }
+  .theme-btn .i-sun{ display:none; }
+  :root[data-theme="dark"] .theme-btn .i-sun{ display:block; }
+  :root[data-theme="dark"] .theme-btn .i-moon{ display:none; }
+
+  .burger{ display:none; flex-direction:column; justify-content:center; gap:5px; }
+  .burger span{ width:20px; height:2px; background:currentColor; border-radius:2px; transition:transform .25s ease, opacity .2s ease; }
+  .site-nav.open .burger span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .site-nav.open .burger span:nth-child(2){ opacity:0; }
+  .site-nav.open .burger span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
   /* ===== hero ===== */
-  .hero{ max-width:1180px; margin:0 auto; padding:64px 24px 40px; text-align:center; }
+  .hero{ max-width:1180px; margin:0 auto; padding:56px 24px 30px; text-align:center; }
   .medallion-wrap{ position:relative; display:inline-flex; align-items:center; justify-content:center; gap:22px; }
   .medallion{
-    width:172px; height:172px; border-radius:50%;
-    background:var(--white);
+    width:164px; height:164px; border-radius:50%;
+    background:#FFFFFF;
     display:flex; align-items:center; justify-content:center;
     box-shadow: var(--shadow), inset 0 0 0 1px var(--line);
     position:relative;
@@ -128,15 +225,15 @@
   }
   .medallion::before{
     content:""; position:absolute; inset:-14px; border-radius:50%;
-    border:1px dashed var(--blue-soft);
+    border:1px dashed var(--line);
   }
   .medallion::after{
     content:""; position:absolute; inset:-30px; border-radius:50%;
-    background:radial-gradient(circle, rgba(47,95,209,.14), transparent 70%);
+    background:radial-gradient(circle, rgba(47,95,209,.16), transparent 70%);
     z-index:-1;
     animation:pulse 3.6s ease-in-out infinite;
   }
-  .medallion img{ width:120px; height:120px; object-fit:contain; }
+  .medallion img{ width:116px; height:116px; object-fit:contain; }
   @keyframes float{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-8px); } }
   @keyframes pulse{ 0%,100%{ opacity:.6; transform:scale(1); } 50%{ opacity:1; transform:scale(1.06); } }
 
@@ -146,251 +243,386 @@
 
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
-    color:var(--gold); font-weight:700; font-size:.8rem; letter-spacing:1px;
+    color:var(--gold-ink); font-weight:700; font-size:.8rem; letter-spacing:.5px;
     background:var(--gold-soft); padding:6px 16px; border-radius:999px;
-    margin:26px 0 14px;
+    margin:24px 0 12px;
   }
 
   h1.hero-title{
-    font-size:clamp(2.1rem, 5vw, 3.4rem);
-    font-weight:900; color:var(--ink); margin:0 0 16px; line-height:1.15;
+    font-size:clamp(2rem, 5vw, 3.4rem);
+    font-weight:900; color:var(--ink); margin:0 0 14px; line-height:1.2;
+    text-wrap:balance;
   }
-  h1.hero-title span{ color:var(--blue); }
+  h1.hero-title span{ color:var(--blue); white-space:nowrap; }
 
   .hero-sub{
-    max-width:620px; margin:0 auto 32px; color:var(--slate);
+    max-width:620px; margin:0 auto 26px; color:var(--slate);
     font-size:1.05rem; line-height:1.9; font-weight:500;
   }
 
-  .hero-actions{ display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; }
+  /* --- آخر أداة استخدمتها (تظهر للزائر الراجع) --- */
+  .resume{
+    display:none; align-items:center; gap:10px; margin:0 auto 18px;
+    background:var(--surface); border:1px solid var(--line); color:var(--link);
+    padding:8px 10px 8px 16px; border-radius:999px; text-decoration:none; font-weight:700; font-size:.88rem;
+    box-shadow:var(--card-shadow); transition:border-color .2s ease, transform .2s ease;
+  }
+  .resume.show{ display:inline-flex; }
+  .resume:hover{ border-color:var(--blue); transform:translateY(-2px); }
+  .resume .r-ico{ width:30px; height:30px; border-radius:50%; background:var(--blue-soft); color:var(--icon); display:flex; align-items:center; justify-content:center; }
+  .resume .r-ico svg{ width:16px; height:16px; }
+  .resume b{ color:var(--blue); }
+
+  /* --- شنو تحتاج اليوم؟ --- */
+  .quick{
+    max-width:860px; margin:0 auto; background:var(--surface); border:1px solid var(--line);
+    border-radius:24px; padding:20px 20px 22px; box-shadow:var(--shadow);
+  }
+  .quick-title{ font-family:'Cairo'; font-weight:800; font-size:1.05rem; margin:0 0 14px; color:var(--ink); }
+  .quick-title small{ font-family:'Tajawal'; font-weight:500; color:var(--slate); font-size:.85rem; margin-inline-start:6px; }
+  .quick-grid{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+  .quick-grid a{
+    display:inline-flex; align-items:center; gap:8px; min-height:44px;
+    padding:9px 16px 9px 18px; border-radius:14px; text-decoration:none;
+    background:var(--blue-mist); border:1px solid var(--line); color:var(--link);
+    font-weight:700; font-size:.9rem;
+    transition:transform .2s ease, border-color .2s ease, background-color .2s ease;
+  }
+  .quick-grid a:hover{ transform:translateY(-3px); border-color:var(--blue); }
+  .quick-grid a svg{ width:20px; height:20px; color:var(--blue); }
+  .quick-grid a .q-new{ font-size:.66rem; font-weight:800; color:#1A1100; background:var(--gold); padding:2px 8px; border-radius:999px; }
+
+  .hero-actions{ display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:24px; }
   .btn{
-    display:inline-flex; align-items:center; gap:8px;
-    padding:14px 30px; border-radius:999px; text-decoration:none;
+    display:inline-flex; align-items:center; gap:8px; min-height:48px;
+    padding:13px 28px; border-radius:999px; text-decoration:none;
     font-weight:700; font-size:.95rem; transition:transform .2s ease, box-shadow .2s ease;
   }
-  .btn-primary{ background:var(--navy); color:#fff; box-shadow:0 14px 28px -10px rgba(18,42,99,.55); }
+  .btn svg{ width:18px; height:18px; }
+  .btn-primary{ background:var(--btn); color:var(--btn-ink); box-shadow:0 14px 28px -10px rgba(18,42,99,.55); }
   .btn-primary:hover{ transform:translateY(-3px); }
-  .btn-ghost{ background:#fff; color:var(--navy); box-shadow:0 0 0 1.5px var(--line) inset; }
+  .btn-ghost{ background:var(--surface); color:var(--link); box-shadow:0 0 0 1.5px var(--line) inset; }
   .btn-ghost:hover{ box-shadow:0 0 0 1.5px var(--blue) inset; transform:translateY(-3px); }
+  .btn-tg{ background:#1A7DB5; color:#fff; box-shadow:0 14px 28px -12px rgba(26,125,181,.7); }
+  .btn-tg:hover{ transform:translateY(-3px); }
+  .btn-ig{ background:rgba(255,255,255,.12); color:#fff; box-shadow:0 0 0 1.5px rgba(255,255,255,.4) inset; }
+  .btn-ig:hover{ background:rgba(255,255,255,.2); transform:translateY(-3px); }
 
   /* ===== stats strip ===== */
   .stats{
-    max-width:1000px; margin:56px auto 0; background:var(--white);
+    max-width:1000px; margin:44px auto 0; background:var(--surface);
+    border:1px solid var(--line);
     border-radius:22px; box-shadow:var(--shadow);
     display:grid; grid-template-columns:repeat(4,1fr);
-    padding:26px 10px;
+    padding:24px 10px;
   }
   .stat{ text-align:center; padding:6px 14px; position:relative; }
   .stat + .stat::before{
     content:""; position:absolute; top:8px; bottom:8px; right:100%;
     width:1px; background:var(--line);
   }
-  .stat-num{ font-weight:900; font-size:1.5rem; color:var(--navy); }
-  .stat-label{ font-size:.78rem; color:var(--slate); font-weight:500; margin-top:4px; }
+  .stat-num{ font-weight:900; font-size:1.55rem; color:var(--link); }
+  .stat-label{ font-size:.8rem; color:var(--slate); font-weight:500; margin-top:4px; }
 
   @media (max-width:760px){
-    .stats{ grid-template-columns:repeat(2,1fr); gap:22px 0; }
+    .stats{ grid-template-columns:repeat(2,1fr); gap:20px 0; }
     .stat + .stat::before{ display:none; }
   }
 
   /* ===== section shell ===== */
-  .section{ max-width:1180px; margin:0 auto; padding:96px 24px 0; }
-  .section-head{ text-align:center; max-width:640px; margin:0 auto 48px; }
+  .section{ max-width:1180px; margin:0 auto; padding:88px 24px 0; }
+  .section-head{ text-align:center; max-width:640px; margin:0 auto 44px; }
+  .section-head .eyebrow{ margin:0; }
   .section-head h2{ font-size:clamp(1.7rem,3vw,2.3rem); font-weight:900; color:var(--ink); margin:14px 0 12px; }
   .section-head p{ color:var(--slate); font-size:1rem; line-height:1.8; font-weight:500; margin:0; }
 
-  .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
-  .reveal.in-view{ opacity:1; transform:translateY(0); }
+  /* الحركة عند التمرير تشتغل فقط إذا اشتغل الجافاسكربت، حتى ما يختفي المحتوى */
+  .js .reveal{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease; }
+  .js .reveal.in-view{ opacity:1; transform:translateY(0); }
 
   /* ===== tools grid ===== */
-  .tools-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
-  @media (max-width:960px){ .tools-grid{ grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:640px){ .tools-grid{ grid-template-columns:1fr; } }
+  .tools-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media (max-width:960px){
+    .tools-grid{ grid-template-columns:repeat(2,1fr); }
+    .tools-grid > .tool-card:nth-child(7){ grid-column:1 / -1; display:grid; grid-template-columns:200px 1fr; }
+    .tools-grid > .tool-card:nth-child(7) .tool-media{ height:auto; border-bottom:0; border-left:1px solid var(--line); }
+  }
 
   .tool-card{
-    background:var(--white); border-radius:20px; overflow:hidden; text-decoration:none; color:var(--ink);
-    box-shadow:0 10px 30px -18px rgba(11,27,59,.25);
+    --ac:#2F5FD1; --ac-tint:rgba(47,95,209,.14);
+    background:var(--surface); border-radius:var(--radius); overflow:hidden; text-decoration:none; color:var(--ink);
+    box-shadow:var(--card-shadow);
     display:flex; flex-direction:column;
-    transition:transform .25s ease, box-shadow .25s ease;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     border:1px solid var(--line);
   }
-  .tool-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
+  .tool-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); border-color:var(--ac); }
+  .ac-blue  { --ac:#2F5FD1; --ac-tint:rgba(47,95,209,.15);  --ac-ink:#1E3E8C; }
+  .ac-indigo{ --ac:#5B5BD6; --ac-tint:rgba(91,91,214,.15);  --ac-ink:#3D3DA8; }
+  .ac-gold  { --ac:#C08A1E; --ac-tint:rgba(192,138,30,.17); --ac-ink:#7A5A14; }
+  .ac-teal  { --ac:#0E9AA0; --ac-tint:rgba(14,154,160,.15); --ac-ink:#0B6B70; }
+  .ac-violet{ --ac:#7C5CE0; --ac-tint:rgba(124,92,224,.15); --ac-ink:#5B3DB8; }
+  .ac-sky   { --ac:#0E93D6; --ac-tint:rgba(14,147,214,.15); --ac-ink:#0B6A9C; }
 
-  /* --- image slot: replace the placeholder <img src> below with a real screenshot
-         of the site. If the file is missing, an icon badge is shown automatically. --- */
   .tool-media{
-    position:relative; height:150px;
-    background:linear-gradient(135deg, var(--blue-soft), var(--white));
+    position:relative; height:128px; overflow:hidden;
+    background:
+      radial-gradient(220px 140px at 15% 0%, var(--ac-tint), transparent 70%),
+      linear-gradient(135deg, var(--ac-tint), transparent 75%),
+      var(--surface);
     display:flex; align-items:center; justify-content:center;
+    border-bottom:1px solid var(--line);
   }
-  .tool-media img.shot{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .tool-media::before, .tool-media::after{
+    content:""; position:absolute; border-radius:50%; border:1px solid var(--ac); opacity:.18;
+  }
+  .tool-media::before{ width:180px; height:180px; left:-50px; bottom:-90px; }
+  .tool-media::after{ width:110px; height:110px; right:-30px; top:-50px; }
   .tool-icon{
-    width:60px; height:60px; border-radius:16px; background:var(--white);
+    width:64px; height:64px; border-radius:18px; background:var(--surface);
     display:flex; align-items:center; justify-content:center;
-    box-shadow:0 10px 20px -8px rgba(18,42,99,.25);
-    color:var(--royal);
+    box-shadow:0 12px 22px -10px rgba(11,27,59,.35), inset 0 0 0 1px var(--line);
+    color:var(--ac); position:relative; z-index:1;
+    transition:transform .3s ease;
   }
-  .tool-icon svg{ width:30px; height:30px; }
+  .tool-card:hover .tool-icon{ transform:scale(1.08) rotate(-4deg); }
+  .tool-icon svg{ width:32px; height:32px; }
   .tool-tag{
-    position:absolute; top:12px; left:12px; background:var(--navy); color:#fff;
-    font-size:.68rem; font-weight:700; padding:4px 12px; border-radius:999px; letter-spacing:.3px;
+    position:absolute; top:12px; left:12px; z-index:1; background:var(--btn); color:var(--btn-ink);
+    font-size:.7rem; font-weight:700; padding:4px 12px; border-radius:999px; letter-spacing:.3px;
+  }
+  .tool-new{
+    position:absolute; top:12px; right:12px; z-index:1;
+    background:var(--gold); color:#1A1100; font-size:.7rem; font-weight:800; padding:4px 12px; border-radius:999px;
+    box-shadow:0 6px 14px -6px rgba(185,139,46,.8);
   }
 
-  .tool-body{ padding:20px 22px 24px; display:flex; flex-direction:column; gap:8px; flex:1; }
-  .tool-body h3{ margin:0; font-size:1.08rem; font-weight:800; color:var(--ink); }
-  .tool-body p{ margin:0; color:var(--slate); font-size:.88rem; line-height:1.7; font-weight:500; flex:1; }
-  .tool-link{ display:flex; align-items:center; gap:6px; margin-top:10px; color:var(--royal); font-weight:700; font-size:.85rem; }
+  .tool-body{ padding:18px 22px 22px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .tool-body h3{ margin:0; font-size:1.1rem; font-weight:800; color:var(--ink); }
+  .tool-body p{ margin:0; color:var(--slate); font-size:.9rem; line-height:1.75; font-weight:500; flex:1; }
+  .mini{ display:flex; flex-wrap:wrap; gap:6px; }
+  .mini span{ font-size:.72rem; font-weight:700; color:var(--ac-ink, var(--link)); background:var(--ac-tint); padding:3px 10px; border-radius:999px; }
+  :root[data-theme="dark"] .mini span{ color:var(--ink); }
+  .tool-link{ display:flex; align-items:center; gap:6px; margin-top:6px; color:var(--link); font-weight:700; font-size:.86rem; }
   .tool-link svg{ width:16px; height:16px; transition:transform .2s ease; }
   .tool-card:hover .tool-link svg{ transform:translateX(-4px); }
 
-  /* --- featured partner card (معهد الخوارزمي) — spans the full grid row --- */
+  /* على الموبايل: بطاقات أفقية مضغوطة حتى تقل مسافة التمرير */
+  @media (max-width:640px){
+    .tools-grid{ grid-template-columns:1fr; gap:14px; }
+    .tool-card:not(.featured), .tools-grid > .tool-card:nth-child(7){ display:grid; grid-template-columns:92px 1fr; }
+    .tool-card:not(.featured) .tool-media{ height:auto; min-height:100%; border-bottom:0; border-left:1px solid var(--line); }
+    .tool-card:not(.featured) .tool-media::after{ display:none; }
+    .tool-card:not(.featured) .tool-tag{ display:none; }
+    .tool-card:not(.featured) .tool-new{ top:8px; right:50%; transform:translateX(50%); font-size:.62rem; padding:2px 8px; }
+    .tool-card:not(.featured) .tool-icon{ width:52px; height:52px; border-radius:15px; }
+    .tool-card:not(.featured) .tool-icon svg{ width:26px; height:26px; }
+    .tool-body{ padding:14px 16px 16px; gap:6px; }
+    .tool-body h3{ font-size:1.02rem; }
+    .tool-body p{ font-size:.85rem; line-height:1.65; }
+  }
+
+  /* --- البطاقة المميزة (معهد الخوارزمي) --- */
   .tool-card.featured{
-    grid-column:1 / -1; flex-direction:row; position:relative;
+    grid-column:span 2; flex-direction:row; position:relative;
     border:1px solid var(--gold-soft);
   }
+  .tool-card.featured:hover{ border-color:var(--gold); }
   .tool-card.featured::before{
     content:""; position:absolute; top:0; right:0; left:0; height:4px; z-index:2;
     background:linear-gradient(90deg, var(--gold), var(--royal), var(--gold));
   }
   .tool-card.featured .tool-media{
     height:auto; min-height:240px; flex:0 0 34%;
-    background:#fff; border-left:1px solid var(--line);
+    background:#FFFFFF; border-bottom:0; border-left:1px solid var(--line);
   }
+  .tool-card.featured .tool-media::before, .tool-card.featured .tool-media::after{ display:none; }
   .tool-card.featured .tool-media img.logo{
     width:200px; height:200px; object-fit:contain; mix-blend-mode:multiply;
     transition:transform .35s ease;
   }
   .tool-card.featured:hover .tool-media img.logo{ transform:scale(1.05); }
-  .tool-card.featured .tool-tag{ background:linear-gradient(135deg,#C9A227,var(--gold)); }
+  .tool-card.featured .tool-tag{ background:linear-gradient(135deg,#C9A227,#B98B2E); color:#fff; }
   .tool-card.featured .tool-body{ padding:32px 34px; justify-content:center; gap:10px; }
   .tool-card.featured .tool-body h3{ font-size:1.45rem; font-weight:900; }
-  .tool-card.featured .motto{ color:var(--gold); font-family:'Cairo'; font-weight:800; font-size:.95rem; margin:-4px 0 2px; }
+  .tool-card.featured .motto{ color:var(--gold-ink); font-family:'Cairo'; font-weight:800; font-size:.95rem; margin:-4px 0 2px; }
   .tool-card.featured .tool-body p{ flex:0; }
   .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
   .chips span{
-    background:var(--blue-mist); border:1px solid var(--line); color:var(--navy);
+    background:var(--blue-mist); border:1px solid var(--line); color:var(--link);
     font-weight:700; font-size:.76rem; padding:6px 12px; border-radius:999px;
   }
-  .tool-card.featured .tool-link{ color:var(--gold); }
+  .tool-card.featured .tool-link{ color:var(--gold-ink); }
+  @media (max-width:960px){ .tool-card.featured{ grid-column:1 / -1; } }
   @media (max-width:640px){
     .tool-card.featured{ flex-direction:column; }
-    .tool-card.featured .tool-media{ flex:none; min-height:0; height:190px; border-left:0; border-bottom:1px solid var(--line); }
-    .tool-card.featured .tool-media img.logo{ width:160px; height:160px; }
-    .tool-card.featured .tool-body{ padding:20px 22px 24px; }
-    .tool-card.featured .tool-body h3{ font-size:1.15rem; }
+    .tool-card.featured .tool-media{ flex:none; min-height:0; height:180px; border-left:0; border-bottom:1px solid var(--line); }
+    .tool-card.featured .tool-media img.logo{ width:150px; height:150px; }
+    .tool-card.featured .tool-body{ padding:20px 20px 22px; }
+    .tool-card.featured .tool-body h3{ font-size:1.18rem; }
+  }
+
+  /* ===== نصيحة اليوم ===== */
+  .tip{
+    max-width:1000px; margin:0 auto; display:flex; align-items:center; gap:18px;
+    background:linear-gradient(135deg, var(--gold-soft), var(--surface) 70%);
+    border:1px solid var(--line); border-radius:22px; padding:20px 24px; box-shadow:var(--card-shadow);
+  }
+  .tip-ico{ width:52px; height:52px; border-radius:16px; background:var(--gold); color:#fff; display:flex; align-items:center; justify-content:center; flex:none; }
+  .tip-ico svg{ width:26px; height:26px; }
+  .tip-body{ flex:1; min-width:0; }
+  .tip-label{ font-family:'Cairo'; font-weight:800; font-size:.82rem; color:var(--gold-ink); }
+  .tip-text{ margin:2px 0 0; font-weight:700; font-size:1.05rem; line-height:1.7; color:var(--ink); }
+  .tip-next{
+    flex:none; min-height:44px; border:1px solid var(--line); background:var(--surface); color:var(--link);
+    font-family:'Tajawal'; font-weight:700; font-size:.85rem; padding:8px 16px; border-radius:999px; cursor:pointer;
+    display:inline-flex; align-items:center; gap:6px;
+  }
+  .tip-next:hover{ border-color:var(--gold); }
+  .tip-next svg{ width:16px; height:16px; }
+  @media (max-width:640px){
+    .tip{ flex-wrap:wrap; padding:18px; gap:14px; }
+    .tip-body{ flex-basis:calc(100% - 70px); }
+    .tip-next{ width:100%; justify-content:center; }
   }
 
   /* ===== features ===== */
   .features{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
   @media (max-width:960px){ .features{ grid-template-columns:repeat(2,1fr); } }
   @media (max-width:520px){ .features{ grid-template-columns:1fr; } }
-  .feature{ background:var(--white); border:1px solid var(--line); border-radius:18px; padding:26px 22px; text-align:right; }
+  .feature{ background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:24px 22px; text-align:right; }
   .feature .fi{
-    width:46px; height:46px; border-radius:12px; background:var(--blue-soft); color:var(--royal);
+    width:46px; height:46px; border-radius:12px; background:var(--blue-soft); color:var(--icon);
     display:flex; align-items:center; justify-content:center; margin-bottom:14px;
   }
   .feature .fi svg{ width:24px; height:24px; }
   .feature h3{ font-size:1rem; font-weight:800; margin:0 0 8px; }
-  .feature p{ font-size:.86rem; color:var(--slate); line-height:1.75; margin:0; font-weight:500; }
+  .feature p{ font-size:.88rem; color:var(--slate); line-height:1.75; margin:0; font-weight:500; }
 
   /* ===== about ===== */
-  .about{
-    display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;
-  }
-  @media (max-width:860px){ .about{ grid-template-columns:1fr; } }
+  .about{ display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+  @media (max-width:860px){ .about{ grid-template-columns:1fr; gap:32px; } }
+  .about-text .eyebrow{ margin:0; }
   .about-text h2{ font-size:clamp(1.6rem,3vw,2.1rem); font-weight:900; margin:14px 0 16px; }
   .about-text p{ color:var(--slate); line-height:1.95; font-size:1rem; font-weight:500; }
   .about-badges{ display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
   .badge-pill{
-    background:var(--blue-soft); color:var(--royal); font-weight:700; font-size:.78rem;
+    background:var(--blue-soft); color:var(--icon); font-weight:700; font-size:.8rem;
     padding:8px 16px; border-radius:999px;
   }
-
   .about-crest{
-    position:relative; aspect-ratio:1/1; max-width:360px; margin:0 auto;
-    border-radius:50%; background:var(--white); box-shadow:var(--shadow);
+    position:relative; aspect-ratio:1/1; max-width:340px; width:100%; margin:0 auto;
+    border-radius:50%; background:#FFFFFF; box-shadow:var(--shadow);
     display:flex; align-items:center; justify-content:center;
   }
   .about-crest::before{
-    content:""; position:absolute; inset:18px; border-radius:50%; border:1.5px dashed var(--line);
+    content:""; position:absolute; inset:18px; border-radius:50%; border:1.5px dashed #E1E8F8;
   }
   .about-crest img{ width:64%; height:64%; object-fit:contain; }
 
-  /* ===== contact / footer ===== */
+  /* ===== CTA ===== */
   .cta-band{
-    margin:110px 24px 0; max-width:1180px; margin-inline:auto;
-    background:linear-gradient(120deg, var(--navy), var(--royal));
-    border-radius:26px; padding:56px 40px; text-align:center; color:#fff;
+    max-width:1180px; margin:0 auto;
+    background:linear-gradient(120deg, #122A63, #1E3E8C);
+    border-radius:26px; padding:52px 32px; text-align:center; color:#fff;
     position:relative; overflow:hidden;
   }
   .cta-band::after{
-    content:""; position:absolute; inset:0;
+    content:""; position:absolute; inset:0; pointer-events:none;
     background:radial-gradient(500px 260px at 85% 0%, rgba(255,255,255,.12), transparent 60%);
   }
-  .cta-band h2{ font-size:clamp(1.5rem,3vw,2rem); font-weight:900; margin:0 0 10px; }
-  .cta-band p{ opacity:.9; font-weight:500; margin:0 0 26px; }
-  .cta-band .btn-primary{ background:#fff; color:var(--navy); }
+  .cta-band h2{ font-size:clamp(1.5rem,3vw,2rem); font-weight:900; margin:0 0 10px; position:relative; z-index:1; }
+  .cta-band p{ opacity:.92; font-weight:500; margin:0 0 24px; position:relative; z-index:1; line-height:1.8; }
+  .cta-band .hero-actions{ margin-top:0; position:relative; z-index:1; }
+  .cta-band .btn-primary{ background:#fff; color:#122A63; }
 
+  /* ===== footer ===== */
   footer{ max-width:1180px; margin:56px auto 0; padding:40px 24px 46px; }
   .footer-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:30px; flex-wrap:wrap; padding-bottom:30px; border-bottom:1px solid var(--line); }
   .footer-brand{ display:flex; align-items:center; gap:12px; }
   .footer-brand img{ width:40px; height:40px; }
-  .footer-brand .brand-name small{ color:var(--slate); }
   .footer-links{ display:flex; gap:44px; flex-wrap:wrap; }
-  .footer-col h4{ font-size:.85rem; font-weight:800; margin:0 0 12px; color:var(--ink); }
-  .footer-col a{ display:block; text-decoration:none; color:var(--slate); font-size:.86rem; font-weight:500; margin-bottom:9px; }
-  .footer-col a:hover{ color:var(--royal); }
+  .footer-col h2{ font-family:'Cairo'; font-size:.88rem; font-weight:800; margin:0 0 12px; color:var(--ink); }
+  .footer-col a{ display:block; text-decoration:none; color:var(--slate); font-size:.88rem; font-weight:500; padding:4px 0; }
+  .footer-col a:hover{ color:var(--blue); }
   .socials{ display:flex; gap:10px; }
   .socials a{
-    width:38px; height:38px; border-radius:50%; background:var(--blue-soft); color:var(--royal);
-    display:flex; align-items:center; justify-content:center;
+    width:44px; height:44px; border-radius:50%; background:var(--blue-soft); color:var(--icon);
+    display:flex; align-items:center; justify-content:center; padding:0;
   }
-  .socials svg{ width:18px; height:18px; }
+  .socials svg{ width:20px; height:20px; }
 
   .footer-bottom{ display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap; padding-top:22px; }
-  .footer-bottom .tagline{
-    font-family:'Cairo'; font-weight:800; font-size:.72rem; letter-spacing:2px; color:var(--gold);
-  }
-  .footer-bottom .copyright{ color:var(--slate); font-size:.8rem; font-weight:500; }
+  .footer-bottom .tagline{ font-family:'Cairo'; font-weight:800; font-size:.72rem; letter-spacing:2px; color:var(--gold-ink); }
+  .footer-bottom .copyright{ color:var(--slate); font-size:.82rem; font-weight:500; }
 
-  @media (max-width:760px){
+  /* ===== موبايل: القائمة ===== */
+  @media (max-width:900px){
     nav.links, .nav-cta{ display:none; }
-    .burger{ display:flex; }
-    header.site-nav.open nav.links{
-      display:flex; position:absolute; top:100%; right:0; left:0; background:#fff;
-      flex-direction:column; padding:18px 24px; gap:16px; border-bottom:1px solid var(--line);
+    .burger{ display:inline-flex; }
+    .site-nav.open nav.links{
+      display:flex; position:absolute; top:100%; right:0; left:0; background:var(--surface);
+      flex-direction:column; align-items:stretch; padding:10px 24px 20px; gap:2px;
+      border-bottom:1px solid var(--line); box-shadow:var(--shadow);
     }
-    header.site-nav.open .nav-cta{ display:inline-flex; margin:0 24px 18px; }
+    .site-nav.open nav.links a{ padding:12px 0; border-bottom:1px solid var(--line); }
+    .site-nav.open nav.links a::after{ display:none; }
+    .site-nav.open nav.links .menu-cta{
+      display:flex; justify-content:center; margin-top:12px; border:0; padding:12px 0;
+      background:var(--btn); color:var(--btn-ink); border-radius:999px;
+    }
+  }
+  @media (max-width:640px){
+    .hero{ padding:36px 16px 24px; }
+    .section{ padding:72px 16px 0; }
+    .nav-inner{ padding:10px 16px; }
+    .medallion{ width:132px; height:132px; }
+    .medallion img{ width:94px; height:94px; }
+    .quick{ padding:16px 12px 18px; border-radius:20px; }
+    .quick-grid{ gap:8px; }
+    .quick-grid a{ position:relative; flex:1 1 calc(50% - 8px); justify-content:flex-start; padding:9px 12px; font-size:.85rem; }
+    .quick-grid a .q-new{ position:absolute; top:-9px; left:10px; font-size:.6rem; padding:1px 7px; }
+    .cta-band{ padding:40px 20px; border-radius:22px; }
+    .cta-band .btn{ width:100%; justify-content:center; }
+    footer{ padding:36px 16px 40px; }
     .about-crest{ max-width:240px; }
   }
 
   @media (prefers-reduced-motion: reduce){
-    *{ animation:none !important; transition:none !important; }
+    *, *::before, *::after{ animation:none !important; transition:none !important; }
     html{ scroll-behavior:auto; }
-    .moroccan-bg{ opacity:.35; }
+    .js .reveal{ opacity:1; transform:none; }
   }
 </style>
 </head>
 <body>
-<div class="moroccan-bg" aria-hidden="true"></div>
+<a class="skip-link" href="#tools">تخطَّ إلى الأدوات</a>
+<div class="moroccan-wrap" aria-hidden="true"><div class="moroccan-bg"></div></div>
 
 <header class="site-nav" id="siteNav">
   <div class="nav-inner">
-    <a href="#top" class="brand">
-      <img src="logo.png" alt="شعار خلاصة السادس">
+    <a href="#top" class="brand" aria-label="خلاصة السادس، الرئيسية">
+      <img src="logo.png" alt="" width="44" height="44">
       <span class="brand-name">خلاصة السادس<small>EXCELLENCE • KNOWLEDGE</small></span>
     </a>
-    <nav class="links">
+    <nav class="links" id="mainMenu" aria-label="القائمة الرئيسية">
       <a href="#top">الرئيسية</a>
       <a href="#tools">الأدوات</a>
       <a href="#partner">معهد الخوارزمي</a>
       <a href="#about">من نحن</a>
       <a href="#contact">تواصل معنا</a>
+      <a href="#tools" class="menu-cta">استكشف الأدوات</a>
     </nav>
-    <a href="#tools" class="nav-cta">استكشف الأدوات</a>
-    <button class="burger" id="burgerBtn" aria-label="فتح القائمة">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-actions">
+      <a href="#tools" class="nav-cta">استكشف الأدوات</a>
+      <button type="button" class="icon-btn theme-btn" id="themeBtn" aria-label="التبديل للوضع الليلي">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="icon-btn burger" id="burgerBtn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mainMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -402,166 +634,199 @@
       <div class="wing" aria-hidden="true">
         <svg viewBox="0 0 78 56" fill="none"><path d="M76 6C60 2 44 14 34 28c-4 5-8 14-6 22" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/><path d="M70 12c-10 2-20 10-26 20" stroke="#C9A227" stroke-width="1.4" stroke-linecap="round"/><path d="M62 8c-8 3-16 10-21 19" stroke="#C9A227" stroke-width="1.4" stroke-linecap="round"/></svg>
       </div>
-      <div class="medallion"><img src="logo.png" alt="شعار خلاصة السادس"></div>
+      <div class="medallion"><img src="logo.png" alt="شعار خلاصة السادس" width="116" height="116" fetchpriority="high"></div>
       <div class="wing" aria-hidden="true">
         <svg viewBox="0 0 78 56" fill="none" style="transform:scaleX(-1)"><path d="M76 6C60 2 44 14 34 28c-4 5-8 14-6 22" stroke="#C9A227" stroke-width="2" stroke-linecap="round"/><path d="M70 12c-10 2-20 10-26 20" stroke="#C9A227" stroke-width="1.4" stroke-linecap="round"/><path d="M62 8c-8 3-16 10-21 19" stroke="#C9A227" stroke-width="1.4" stroke-linecap="round"/></svg>
       </div>
     </div>
 
-    <div class="eyebrow">🏆 أقوى منصة طلابية على مستوى الإقليم</div>
-    <h1 class="hero-title">كل ما يحتاجه طالب <span>السادس الإعدادي</span><br>في مكان واحد</h1>
-    <p class="hero-sub">بإدارة نخبة من طلبة الأوائل وبالتعاون مع أفضل الأساتذة، جمعنا لك عدّادات، أرشيف أسئلة، مواد مراجعة، وأدوات حساب المعدل — لتبقى مركّزًا على التفوق لا على البحث.</p>
+    <div><span class="eyebrow">🏆 أقوى منصة طلابية على مستوى الإقليم</span></div>
+    <h1 class="hero-title">كل ما يحتاجه طالب <span>السادس الإعدادي</span> في مكان واحد</h1>
+    <p class="hero-sub">بإدارة نخبة من الطلبة الأوائل وبالتعاون مع أفضل الأساتذة، جمعنا لك العدّادات والأسئلة الوزارية والمراجعات وحاسبة المعدل، حتى يبقى تركيزك على التفوق لا على البحث.</p>
+
+    <a href="#tools" class="resume" id="resumeLink" target="_blank" rel="noopener">
+      <span class="r-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M20 4v5h-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span>كمّل من وين ما وكفت: <b id="resumeName"></b></span>
+    </a>
+
+    <div class="quick reveal">
+      <h2 class="quick-title">شنو تحتاج اليوم؟ <small>اختر وابدأ مباشرة</small></h2>
+      <div class="quick-grid">
+        <a href="https://study-with-one.vercel.app/" target="_blank" rel="noopener" data-tool="عداد بومودورو">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="3" y="14" width="4" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="17" y="14" width="4" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/></svg>
+          ذاكر بتركيز <span class="q-new">محدّث</span>
+        </a>
+        <a href="https://questionstlv12.vercel.app/" target="_blank" rel="noopener" data-tool="الأسئلة الوزارية">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12h6M9 16h6M9 8h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          حل أسئلة وزارية
+        </a>
+        <a href="https://tlv12calculator.vercel.app/" target="_blank" rel="noopener" data-tool="حاسبة المعدل">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 7h8M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1M8 18h1M12 18h1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          احسب معدلك
+        </a>
+        <a href="https://chemistrytlv12.vercel.app/" target="_blank" rel="noopener" data-tool="مراجعة الكيمياء">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 16h8" stroke="currentColor" stroke-width="2"/></svg>
+          راجع الكيمياء
+        </a>
+        <a href="https://snowy-three-10.vercel.app/" target="_blank" rel="noopener" data-tool="مراجعة الفيزياء">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8" transform="rotate(120 12 12)"/></svg>
+          راجع الفيزياء
+        </a>
+        <a href="https://translate-pi-virid.vercel.app/" target="_blank" rel="noopener" data-tool="المترجم">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 22l-5-10-5 10M14 18h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          ترجم من الكوردي <span class="q-new">جديد</span>
+        </a>
+        <a href="https://tlv12timer.vercel.app/" target="_blank" rel="noopener" data-tool="العداد الوزاري">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h12M6 21h12M8 3v3.5L12 12l-4 5.5V21M16 3v3.5L12 12l4 5.5V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          كم باقي على النتائج؟
+        </a>
+      </div>
+    </div>
 
     <div class="hero-actions">
       <a href="#tools" class="btn btn-primary">
-        ابدأ الآن
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        شوف كل الأدوات
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <a href="#about" class="btn btn-ghost">تعرّف علينا أكثر</a>
+      <a href="https://t.me/tlv_12" class="btn btn-ghost" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6 3-4 5 3 2-14z" stroke="#229ED9" stroke-width="2" stroke-linejoin="round"/></svg>
+        انضم لقناتنا على تيليجرام
+      </a>
     </div>
 
     <div class="stats reveal">
-      <div class="stat"><div class="stat-num">٧</div><div class="stat-label">أدوات تعليمية متكاملة</div></div>
-      <div class="stat"><div class="stat-num">٢</div><div class="stat-label">مادتين مراجعة شاملة</div></div>
-      <div class="stat"><div class="stat-num">١٠٠٪</div><div class="stat-label">مجاني بالكامل</div></div>
-      <div class="stat"><div class="stat-num">٢٤/٧</div><div class="stat-label">متاح في أي وقت</div></div>
+      <div class="stat"><div class="stat-num">٧</div><div class="stat-label">أدوات مجانية متكاملة</div></div>
+      <div class="stat"><div class="stat-num">٣</div><div class="stat-label">لغات في المترجم</div></div>
+      <div class="stat"><div class="stat-num">١٠٠٪</div><div class="stat-label">مجاني بدون اشتراك</div></div>
+      <div class="stat"><div class="stat-num">٢٤/٧</div><div class="stat-label">متاح بأي وقت</div></div>
     </div>
   </section>
 
   <!-- ===== Tools ===== -->
   <section class="section" id="tools">
     <div class="section-head reveal">
-      <div class="laurel"><span class="stem"></span><span class="eyebrow" style="margin:0">أدواتنا</span><span class="stem"></span></div>
+      <div class="laurel"><span class="stem"></span><span class="eyebrow">أدواتنا</span><span class="stem"></span></div>
       <h2>أدوات صُممت لتسهّل مذاكرتك</h2>
-      <p>كل أداة تعالج مشكلة حقيقية يواجهها طالب السادس — من إدارة الوقت إلى مراجعة المنهج وحساب المعدل.</p>
+      <p>كل أداة تحل مشكلة حقيقية يواجهها طالب السادس، من تنظيم الوقت إلى مراجعة المنهج وحساب المعدل.</p>
     </div>
 
     <div class="tools-grid">
 
-      <!-- كارت 1 : عداد وزاري -->
-      <a href="https://tlv12timer.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
-        <div class="tool-media">
-          <span class="tool-tag">مباشر</span>
-          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-timer.jpg -->
-          <img class="shot" src="shot-timer.jpg" alt="عداد وزاري" onerror="this.style.display='none'">
-          <div class="tool-icon">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 9v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M9 2h6M12 2v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
-        </div>
-        <div class="tool-body">
-          <h3>عداد وزاري</h3>
-          <p>كم تبقّى على إعلان النتائج؟ عداد تنازلي لحظي يرافقك يومًا بيوم حتى الإعلان.</p>
-          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </div>
-      </a>
-
-      <!-- كارت 2 : الأسئلة الوزارية -->
-      <a href="https://questionstlv12.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
-        <div class="tool-media">
-          <span class="tool-tag">أرشيف</span>
-          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-questions.jpg -->
-          <img class="shot" src="shot-questions.jpg" alt="الأسئلة الوزارية" onerror="this.style.display='none'">
-          <div class="tool-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6M9 16h6M9 8h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
-        </div>
-        <div class="tool-body">
-          <h3>الأسئلة الوزارية</h3>
-          <p>أرشيف منظّم لأسئلة الأعوام السابقة، سهل التصفح والبحث حسب المادة والفصل.</p>
-          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </div>
-      </a>
-
-      <!-- كارت 3 : عداد بومودورو -->
-      <a href="https://study-with-one.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+      <!-- كارت 1 : عداد بومودورو -->
+      <a href="https://study-with-one.vercel.app/" class="tool-card ac-gold reveal" target="_blank" rel="noopener" data-tool="عداد بومودورو">
         <div class="tool-media">
           <span class="tool-tag">تركيز</span>
-          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-pomodoro.jpg -->
-          <img class="shot" src="shot-pomodoro.jpg" alt="عداد بومودورو" onerror="this.style.display='none'">
+          <span class="tool-new">محدّث</span>
           <div class="tool-icon">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 9h16M9 3v3M15 3v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 10v6l4.5-3z" fill="currentColor"/><path d="M9 2h6M12 2v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
         </div>
         <div class="tool-body">
           <h3>عداد بومودورو</h3>
-          <p>قسّم وقتك بين فترات تركيز وراحة قصيرة، وحافظ على إنتاجيتك خلال المذاكرة الطويلة.</p>
-          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p>جلسات تركيز واستراحة بأوقات جاهزة أو مخصصة، مع هدف يومي وتقييم لإنجازك.</p>
+          <div class="mini"><span>أصوات تركيز</span><span>وضع ليلي</span><span>أبطال الأسبوع</span></div>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </div>
       </a>
 
-      <!-- كارت 4 : كيمياء -->
-      <a href="https://chemistrytlv12.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+      <!-- كارت 2 : الأسئلة الوزارية -->
+      <a href="https://questionstlv12.vercel.app/" class="tool-card ac-indigo reveal" target="_blank" rel="noopener" data-tool="الأسئلة الوزارية">
         <div class="tool-media">
-          <span class="tool-tag">مادة</span>
-          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-chemistry.jpg -->
-          <img class="shot" src="shot-chemistry.jpg" alt="كيمياء" onerror="this.style.display='none'">
+          <span class="tool-tag">أرشيف</span>
           <div class="tool-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 16h8" stroke="currentColor" stroke-width="1.8"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6M9 16h6M9 8h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           </div>
         </div>
         <div class="tool-body">
-          <h3>مراجعة الكيمياء</h3>
-          <p>شرح مبسّط وشامل لمنهج الكيمياء، مقسّم بأسلوب يسهّل الحفظ والفهم قبل الامتحان.</p>
-          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>الأسئلة الوزارية</h3>
+          <p>أرشيف منظّم لأسئلة السنوات السابقة، سهل التصفح والبحث حسب المادة والفصل.</p>
+          <div class="mini"><span>كل المواد</span><span>حسب الفصل</span></div>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </div>
       </a>
 
-      <!-- كارت 5 : حاسبة المعدل -->
-      <a href="https://tlv12calculator.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
-        <div class="tool-media">
-          <span class="tool-tag">أداة</span>
-          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-calculator.jpg -->
-          <img class="shot" src="shot-calculator.jpg" alt="حاسبة المعدل" onerror="this.style.display='none'">
-          <div class="tool-icon">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h8M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1M8 19h1M12 19h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
-        </div>
-        <div class="tool-body">
-          <h3>حاسبة المعدل</h3>
-          <p>احسب معدلك بدقة مع احتساب نسبة الصف العاشر والحادي عشر خلال ثوانٍ.</p>
-          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </div>
-      </a>
-
-      <!-- كارت 6 : فيزياء -->
-      <a href="https://snowy-three-10.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
-        <div class="tool-media">
-          <span class="tool-tag">مادة</span>
-          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-physics.jpg -->
-          <img class="shot" src="shot-physics.jpg" alt="فيزياء" onerror="this.style.display='none'">
-          <div class="tool-icon">
-            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2.2" stroke="currentColor" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8" transform="rotate(120 12 12)"/></svg>
-          </div>
-        </div>
-        <div class="tool-body">
-          <h3>مراجعة الفيزياء</h3>
-          <p>تغطية متكاملة لجميع فصول منهج الفيزياء بأسلوب مركّز يوفّر وقتك.</p>
-          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </div>
-      </a>
-
-      <!-- كارت 7 : المترجم -->
-      <a href="https://translate-pi-virid.vercel.app/" class="tool-card reveal" rel="noopener" target="_blank">
+      <!-- كارت 3 : المترجم -->
+      <a href="https://translate-pi-virid.vercel.app/" class="tool-card ac-blue reveal" target="_blank" rel="noopener" data-tool="المترجم">
         <div class="tool-media">
           <span class="tool-tag">ترجمة</span>
-          <!-- ضع هنا سكرين شوت حقيقي للموقع باسم shot-translate.jpg -->
-          <img class="shot" src="shot-translate.jpg" alt="المترجم" onerror="this.style.display='none'">
+          <span class="tool-new">جديد</span>
           <div class="tool-icon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 22l-5-10-5 10M14 18h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 22l-5-10-5 10M14 18h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
         </div>
         <div class="tool-body">
           <h3>المترجم</h3>
           <p>ترجمة بين العربية والكوردية والإنكليزية بالكتابة أو الصورة أو الصوت، مع قراءة الترجمة بصوت.</p>
-          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <div class="mini"><span>صوّر الصفحة</span><span>تكلم وترجم</span><span>سوراني وبهديني</span></div>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 4 : كيمياء -->
+      <a href="https://chemistrytlv12.vercel.app/" class="tool-card ac-teal reveal" target="_blank" rel="noopener" data-tool="مراجعة الكيمياء">
+        <div class="tool-media">
+          <span class="tool-tag">مادة</span>
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 16h8" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>مراجعة الكيمياء</h3>
+          <p>شرح مبسّط وشامل لمنهج الكيمياء، مقسّم بأسلوب يسهّل الحفظ والفهم قبل الامتحان.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 5 : فيزياء -->
+      <a href="https://snowy-three-10.vercel.app/" class="tool-card ac-violet reveal" target="_blank" rel="noopener" data-tool="مراجعة الفيزياء">
+        <div class="tool-media">
+          <span class="tool-tag">مادة</span>
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="2.2" stroke="currentColor" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="4" stroke="currentColor" stroke-width="1.8" transform="rotate(120 12 12)"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>مراجعة الفيزياء</h3>
+          <p>تغطية متكاملة لكل فصول منهج الفيزياء بأسلوب مركّز يوفّر وقتك.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 6 : حاسبة المعدل -->
+      <a href="https://tlv12calculator.vercel.app/" class="tool-card ac-sky reveal" target="_blank" rel="noopener" data-tool="حاسبة المعدل">
+        <div class="tool-media">
+          <span class="tool-tag">أداة</span>
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 7h8M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1M8 18h1M12 18h1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>حاسبة المعدل</h3>
+          <p>احسب معدلك بدقة مع احتساب نسبة الصف العاشر والحادي عشر خلال ثوانٍ.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- كارت 7 : العداد الوزاري -->
+      <a href="https://tlv12timer.vercel.app/" class="tool-card ac-blue reveal" target="_blank" rel="noopener" data-tool="العداد الوزاري">
+        <div class="tool-media">
+          <span class="tool-tag">مباشر</span>
+          <div class="tool-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h12M6 21h12M8 3v3.5L12 12l-4 5.5V21M16 3v3.5L12 12l4 5.5V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="tool-body">
+          <h3>العداد الوزاري</h3>
+          <p>كم باقي على إعلان النتائج؟ عداد تنازلي لحظي يرافقك يومًا بيوم حتى الإعلان.</p>
+          <span class="tool-link">افتح الأداة <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </div>
       </a>
 
       <!-- كارت 8 : معهد الخوارزمي (بطاقة مميزة بعرض كامل) -->
-      <a href="https://alkhwarizmiinstitute.vercel.app/" id="partner" class="tool-card featured reveal" rel="noopener" target="_blank">
+      <a href="https://alkhwarizmiinstitute.vercel.app/" id="partner" class="tool-card featured reveal" target="_blank" rel="noopener">
         <div class="tool-media">
           <span class="tool-tag">شريكنا التعليمي</span>
-          <img class="logo" src="alkhwarizmi-logo.png" alt="شعار معهد الخوارزمي" loading="lazy">
+          <img class="logo" src="alkhwarizmi-logo.png" alt="شعار معهد الخوارزمي" width="200" height="200" loading="lazy" decoding="async">
         </div>
         <div class="tool-body">
           <h3>معهد الخوارزمي</h3>
@@ -573,40 +838,55 @@
             <span>منهج الإقليم والمركز</span>
             <span>حجز عبر واتساب</span>
           </div>
-          <span class="tool-link">زيارة موقع المعهد <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <span class="tool-link">زيارة موقع المعهد <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </div>
       </a>
 
     </div>
   </section>
 
+  <!-- ===== نصيحة اليوم ===== -->
+  <section class="section" aria-labelledby="tipLabel">
+    <div class="tip reveal">
+      <div class="tip-ico"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+      <div class="tip-body">
+        <div class="tip-label" id="tipLabel">نصيحة اليوم</div>
+        <p class="tip-text" id="tipText" aria-live="polite">ابدأ يومك بأصعب مادة، واترك الأسهل لآخر اليوم.</p>
+      </div>
+      <button type="button" class="tip-next" id="tipNext">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M20 4v5h-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        نصيحة ثانية
+      </button>
+    </div>
+  </section>
+
   <!-- ===== Features ===== -->
   <section class="section" id="why">
     <div class="section-head reveal">
-      <div class="laurel"><span class="stem"></span><span class="eyebrow" style="margin:0">لماذا نحن</span><span class="stem"></span></div>
+      <div class="laurel"><span class="stem"></span><span class="eyebrow">لماذا نحن</span><span class="stem"></span></div>
       <h2>لماذا يختار الطلبة خلاصة السادس</h2>
     </div>
 
     <div class="features">
       <div class="feature reveal">
-        <div class="fi"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
         <h3>مبني من طلاب لطلاب</h3>
-        <p>فريق العمل من طلبة الأوائل الذين خاضوا نفس تجربة السادس الإعدادي بأنفسهم.</p>
+        <p>فريق العمل من الطلبة الأوائل الذين خاضوا تجربة السادس الإعدادي بأنفسهم.</p>
       </div>
       <div class="feature reveal">
-        <div class="fi"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5a2 2 0 012-2h9l5 5v11a2 2 0 01-2 2H6a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>تغطية شاملة للمنهج</h3>
         <p>أدوات ومواد تغطي أهم أجزاء منهج السادس الإعدادي بترتيب واضح ومباشر.</p>
       </div>
       <div class="feature reveal">
-        <div class="fi"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M18 4v4h-4M6 20v-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M18 4v4h-4M6 20v-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>تحديث مستمر</h3>
-        <p>نراجع الأدوات باستمرار ونطوّرها بناءً على ملاحظات الطلبة واحتياجاتهم الفعلية.</p>
+        <p>نطوّر الأدوات باستمرار حسب ملاحظات الطلبة، وآخرها المترجم بالصوت وأصوات التركيز.</p>
       </div>
       <div class="feature reveal">
-        <div class="fi"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 4 6.5 4c2 0 3.5 1.2 4.3 2.8.8-1.6 2.3-2.8 4.3-2.8 3.5 0 6 3.5 4 8-2.5 4.65-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+        <div class="fi"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-9C.5 7.5 3 4 6.5 4c2 0 3.5 1.2 4.3 2.8.8-1.6 2.3-2.8 4.3-2.8 3.5 0 6 3.5 4 8-2.5 4.65-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
         <h3>مجاني بالكامل</h3>
-        <p>كل الأدوات متاحة لجميع طلبة الإقليم دون أي اشتراك أو مقابل مادي.</p>
+        <p>كل الأدوات متاحة لجميع طلبة الإقليم بدون أي اشتراك أو مقابل.</p>
       </div>
     </div>
   </section>
@@ -617,7 +897,7 @@
       <div class="about-text reveal">
         <div class="eyebrow">من نحن</div>
         <h2>قصة خلاصة السادس</h2>
-        <p>انطلقت المنصة من فكرة بسيطة: أن تكون المذاكرة أسهل وأكثر تنظيمًا لطلبة السادس الإعدادي في الإقليم. بإدارة نخبة من الطلبة الأوائل وبالتعاون مع أفضل الأساتذة، جمعنا في مكان واحد كل ما يحتاجه الطالب — من عدّادات وأرشيف أسئلة، إلى مواد مراجعة وأدوات حساب المعدل — ليبقى تركيزه على التفوق لا على البحث.</p>
+        <p>انطلقت المنصة من فكرة بسيطة: أن تكون المذاكرة أسهل وأكثر تنظيمًا لطلبة السادس الإعدادي في الإقليم. بإدارة نخبة من الطلبة الأوائل وبالتعاون مع أفضل الأساتذة، جمعنا في مكان واحد كل ما يحتاجه الطالب، من العدّادات والأسئلة الوزارية إلى المراجعات وحاسبة المعدل والمترجم، ليبقى تركيزه على التفوق لا على البحث.</p>
         <div class="about-badges">
           <span class="badge-pill">🎓 تفوّق أكاديمي</span>
           <span class="badge-pill">📚 معرفة منظّمة</span>
@@ -625,7 +905,7 @@
         </div>
       </div>
       <div class="about-crest reveal">
-        <img src="logo.png" alt="شعار خلاصة السادس">
+        <img src="logo.png" alt="شعار خلاصة السادس" width="218" height="218" loading="lazy" decoding="async">
       </div>
     </div>
   </section>
@@ -634,8 +914,18 @@
   <section class="section" id="contact">
     <div class="cta-band reveal">
       <h2>جاهز تبدأ رحلة التفوق؟</h2>
-      <p>جرّب أدواتنا الآن مجانًا، أو تواصل معنا لأي استفسار أو اقتراح.</p>
-      <a href="#tools" class="btn btn-primary">استكشف الأدوات</a>
+      <p>جرّب أدواتنا الآن مجانًا، وتابعنا على تيليجرام وإنستغرام حتى يوصلك كل جديد، أو راسلنا بأي سؤال أو اقتراح.</p>
+      <div class="hero-actions">
+        <a href="https://t.me/tlv_12" class="btn btn-tg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6 3-4 5 3 2-14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          انضم لقناة تيليجرام
+        </a>
+        <a href="https://www.instagram.com/khulast.alsads/" class="btn btn-ig" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+          تابعنا على إنستغرام
+        </a>
+        <a href="#tools" class="btn btn-primary">استكشف الأدوات</a>
+      </div>
     </div>
   </section>
 
@@ -644,57 +934,140 @@
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <img src="logo.png" alt="شعار خلاصة السادس">
+      <img src="logo.png" alt="" width="40" height="40" loading="lazy" decoding="async">
       <span class="brand-name">خلاصة السادس<small>أقوى منصة طلابية على مستوى الإقليم</small></span>
     </div>
 
     <div class="footer-links">
       <div class="footer-col">
-        <h4>روابط سريعة</h4>
+        <h2>روابط سريعة</h2>
         <a href="#top">الرئيسية</a>
         <a href="#tools">الأدوات</a>
         <a href="#about">من نحن</a>
       </div>
       <div class="footer-col">
-        <h4>الأدوات</h4>
-        <a href="https://tlv12timer.vercel.app/" target="_blank" rel="noopener">عداد وزاري</a>
-        <a href="https://tlv12calculator.vercel.app/" target="_blank" rel="noopener">حاسبة المعدل</a>
+        <h2>الأدوات</h2>
+        <a href="https://study-with-one.vercel.app/" target="_blank" rel="noopener">عداد بومودورو</a>
         <a href="https://questionstlv12.vercel.app/" target="_blank" rel="noopener">الأسئلة الوزارية</a>
         <a href="https://translate-pi-virid.vercel.app/" target="_blank" rel="noopener">المترجم</a>
+        <a href="https://tlv12calculator.vercel.app/" target="_blank" rel="noopener">حاسبة المعدل</a>
       </div>
       <div class="footer-col">
-        <h4>شركاؤنا</h4>
+        <h2>المراجعات</h2>
+        <a href="https://chemistrytlv12.vercel.app/" target="_blank" rel="noopener">الكيمياء</a>
+        <a href="https://snowy-three-10.vercel.app/" target="_blank" rel="noopener">الفيزياء</a>
+        <a href="https://tlv12timer.vercel.app/" target="_blank" rel="noopener">العداد الوزاري</a>
         <a href="https://alkhwarizmiinstitute.vercel.app/" target="_blank" rel="noopener">معهد الخوارزمي</a>
       </div>
       <div class="footer-col">
-        <h4>تواصل معنا</h4>
-        <!-- استبدل # بروابط التواصل الاجتماعي الحقيقية -->
+        <h2>تواصل معنا</h2>
         <div class="socials">
-          <a href="#" aria-label="تيليجرام"><svg viewBox="0 0 24 24" fill="none"><path d="M21 4L3 11l6 2 2 6 3-4 5 3 2-14z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
-          <a href="#" aria-label="انستغرام"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20l1.4-4.2A8 8 0 1112 20a8 8 0 01-4.6-1.4L4 20z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+          <a href="https://t.me/tlv_12" target="_blank" rel="noopener" aria-label="قناة خلاصة السادس على تيليجرام"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6 3-4 5 3 2-14z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></a>
+          <a href="https://www.instagram.com/khulast.alsads/" target="_blank" rel="noopener" aria-label="حساب خلاصة السادس على إنستغرام"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.4" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg></a>
+          <!-- لإضافة واتساب: انسخ أحد السطرين أعلاه وبدّل الرابط والأيقونة -->
         </div>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <span class="tagline">EXCELLENCE • KNOWLEDGE • SUCCESS</span>
-    <span class="copyright">© 2026 خلاصة السادس. جميع الحقوق محفوظة.</span>
+    <span class="copyright">© <span id="year">2026</span> خلاصة السادس. جميع الحقوق محفوظة.</span>
   </div>
 </footer>
 
 <script>
-  // قائمة الجوال
-  const burger = document.getElementById('burgerBtn');
-  const nav = document.getElementById('siteNav');
-  burger.addEventListener('click', () => nav.classList.toggle('open'));
-  document.querySelectorAll('nav.links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  (function () {
+    var root = document.documentElement;
+    var store = {
+      get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+      set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    };
 
-  // ظهور العناصر عند التمرير
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
-  }, { threshold: .15 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    // الوضع الليلي
+    var themeBtn = document.getElementById('themeBtn');
+    var themeMeta = document.getElementById('themeColor');
+    function paintTheme() {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      themeBtn.setAttribute('aria-label', dark ? 'التبديل للوضع الصباحي' : 'التبديل للوضع الليلي');
+      themeMeta.setAttribute('content', dark ? '#0A1226' : '#FBFCFF');
+    }
+    themeBtn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      store.set('kh_site_theme', next);
+      paintTheme();
+    });
+    paintTheme();
+
+    // قائمة الجوال
+    var nav = document.getElementById('siteNav');
+    var burger = document.getElementById('burgerBtn');
+    function setMenu(open) {
+      nav.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
+    }
+    burger.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+    document.querySelectorAll('nav.links a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); burger.focus(); } });
+    document.addEventListener('click', function (e) { if (nav.classList.contains('open') && !nav.contains(e.target)) setMenu(false); });
+
+    // ظهور العناصر عند التمرير
+    var items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+      }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+      items.forEach(function (el) { io.observe(el); });
+    } else {
+      items.forEach(function (el) { el.classList.add('in-view'); });
+    }
+
+    // آخر أداة فتحها الطالب
+    document.querySelectorAll('a[data-tool]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        store.set('kh_last_tool', JSON.stringify({ n: a.getAttribute('data-tool'), u: a.href }));
+      });
+    });
+    try {
+      var last = JSON.parse(store.get('kh_last_tool') || 'null');
+      if (last && last.n && /^https:\/\//.test(last.u)) {
+        var r = document.getElementById('resumeLink');
+        r.href = last.u;
+        document.getElementById('resumeName').textContent = last.n;
+        r.classList.add('show');
+      }
+    } catch (e) {}
+
+    // نصيحة اليوم: تتغير كل يوم، والزر يعرض غيرها
+    var tips = [
+      'ابدأ يومك بأصعب مادة، واترك الأسهل لآخر اليوم.',
+      'بعد كل جلستين تركيز، حل سؤالًا وزاريًا واحدًا من نفس الفصل.',
+      'اكتب القوانين في ورقة صغيرة وراجعها وقت الاستراحة.',
+      'النوم الكافي جزء من المذاكرة، وليس وقتًا ضائعًا.',
+      'اشرح الدرس لنفسك بصوت عالٍ، وأي نقطة تتلكأ فيها ارجع لها.',
+      'أبعد الموبايل وقت التركيز، وشغّل صوت المطر بدلًا منه.',
+      'حل الأسئلة الوزارية بوقت محدد كأنك في يوم الامتحان.',
+      'راجع ما درسته أمس عشر دقائق قبل أن تبدأ درسًا جديدًا.',
+      'قسّم الفصل الطويل إلى أجزاء صغيرة، وكل جزء جلسة تركيز.',
+      'اشرب ماءً وتحرك قليلًا في كل استراحة.',
+      'علّم الأسئلة التي أخطأت فيها، وارجع لها بعد ثلاثة أيام.',
+      'ضع هدفًا يوميًا واقعيًا، فالاستمرار أهم من عدد الساعات.',
+      'احسب معدلك المتوقع، واجعل الرقم دافعًا لك.',
+      'لا تقارن نفسك بغيرك، قارن نفسك بنفسك أمس.'
+    ];
+    var now = new Date();
+    var day = Math.floor((now - now.getTimezoneOffset() * 60000) / 86400000);
+    var tipIndex = day % tips.length;
+    var tipText = document.getElementById('tipText');
+    tipText.textContent = tips[tipIndex];
+    document.getElementById('tipNext').addEventListener('click', function () {
+      tipIndex = (tipIndex + 1) % tips.length;
+      tipText.textContent = tips[tipIndex];
+    });
+
+    document.getElementById('year').textContent = now.getFullYear();
+  })();
 </script>
 </body>
 </html>
